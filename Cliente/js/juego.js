@@ -1,12 +1,13 @@
 var Juego = {
   //configuracion de tamaño de mapa
-  ancho: 1500,
-  alto: 1000
+  ancho: 740,
+  alto: 684
 }
 
 Juego.iniciarRecursos = function() {
   Resources.load([
-    'images/mapa.jpeg'
+    'images/mapa1.png',
+    'images/jugador1.png'
   ]);
   Resources.onReady(this.comenzar.bind(Juego));
 };
@@ -35,31 +36,31 @@ Juego.update = function() {
 
 // Captura las teclas y si coincide con alguna de las flechas tiene que
 // hacer que el jugador principal se mueva
-// Juego.capturarMovimiento = function(tecla) {
-//   var movX = 0;
-//   var movY = 0;
-//   var velocidad = this.jugador.velocidad;
-//
-//   // El movimiento esta determinado por la velocidad del jugador
-//   if (tecla == 'izq') {
-//     movX = -velocidad;
-//   }
-//   if (tecla == 'arriba') {
-//     movY = -velocidad;
-//   }
-//   if (tecla == 'der') {
-//     movX = velocidad;
-//   }
-//   if (tecla == 'abajo') {
-//     movY = velocidad;
-//   }
-//
-//   // Si se puede mover hacia esa posicion hay que hacer efectivo este movimiento
-//   if (this.chequearColisiones(movX + this.jugador.x, movY + this.jugador.y)) {
-//     Jugador.mover(tecla);
-//
-//   }
-// };
+Juego.capturarMovimiento = function(tecla) {
+  // var movX = 0;
+  // var movY = 0;
+  // var velocidad = this.jugador.velocidad;
+Jugador.mover(tecla);
+  // // El movimiento esta determinado por la velocidad del jugador
+  // if (tecla == 'izq') {
+  //   movX = -velocidad;
+  // }
+  // if (tecla == 'arriba') {
+  //   movY = -velocidad;
+  // }
+  // if (tecla == 'der') {
+  //   movX = velocidad;
+  // }
+  // if (tecla == 'abajo') {
+  //   movY = velocidad;
+  // }
+  //
+  // // Si se puede mover hacia esa posicion hay que hacer efectivo este movimiento
+  // if (this.chequearColisiones(movX + this.jugador.x, movY + this.jugador.y)) {
+  //
+  //
+  // }
+};
 
 Juego.dibujar = function() {
   // Borrar el fotograma actual
@@ -67,7 +68,7 @@ Juego.dibujar = function() {
   //Se pinta la imagen de fondo segun el estado del juego
   this.dibujarFondo();
 
-  // Dibujante.dibujarEntidad(Jugador);
+  Dibujante.dibujarEntidad(Jugador);
 
   // Se recorren los obstaculos de la carretera pintandolos
   // this.obstaculosCarretera.forEach(function(obstaculo) {
@@ -87,8 +88,7 @@ Juego.dibujar = function() {
   //   Dibujante.dibujarRectangulo('red', x, 0, tamanio, 8);
   // }
 
-  //El dibujante dibuja la linea de llegada
-  // Dibujante.dibujarRectangulo('blue', 759, 533, 128, 30);
+
 };
 
 /* Recorre los enemigos haciendo que se muevan. De la misma forma que hicimos
@@ -101,7 +101,7 @@ una funcionalidad similar pero para que se muevan.*/
 // };
 
 Juego.dibujarFondo = function() {
-  Dibujante.dibujarImagen('images/mapa.jpeg', 0, 5, this.ancho, this.alto);
+  Dibujante.dibujarImagen('images/mapa1.png', 0, 5, this.ancho, this.alto);
   // // Si se termino el juego hay que mostrar el mensaje de game over de fondo
   // if (this.terminoJuego()) {
   //   Dibujante.dibujarImagen('imagenes/mensaje_gameover.png', 0, 5, this.anchoCanvas, this.altoCanvas);
@@ -122,13 +122,13 @@ Juego.iniciarRecursos();
 
 // Activa las lecturas del teclado al presionar teclas
 // Documentacion: https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener
-// document.addEventListener('keydown', function(e) {
-//   var allowedKeys = {
-//     37: 'izq',
-//     38: 'arriba',
-//     39: 'der',
-//     40: 'abajo'
-//   };
-//
-//   Juego.capturarMovimiento(allowedKeys[e.keyCode]);
-// });
+document.addEventListener('keydown', function(e) {
+  var allowedKeys = {
+    37: 'izq',
+    38: 'arriba',
+    39: 'der',
+    40: 'abajo'
+  };
+
+  Juego.capturarMovimiento(allowedKeys[e.keyCode]);
+});

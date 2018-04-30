@@ -21,7 +21,6 @@ var Dibujante = {
   carteles de game over.*/
   dibujarImagen: function (ruta, x, y, ancho, alto) {
     var imagen = Resources.get(ruta);
-    console.log(alto);
     this.canvas.getContext('2d').drawImage(imagen, x, y, ancho, alto);
   },
 
