@@ -1,7 +1,8 @@
 var Juego = {
   //configuracion de tamaño de mapa
-  ancho: 740,
-  alto: 684
+
+  ancho: window.innerWidth,
+  alto: window.innerHeight
 }
 
 Juego.iniciarRecursos = function() {
