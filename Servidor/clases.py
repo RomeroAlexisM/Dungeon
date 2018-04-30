@@ -11,13 +11,13 @@ class Jugador:
         self.items = items
 
     def vive(self):
-        return self.ps > 0          #retornará True o False
+        return self.ps > 0          # retornará True o False
 
     def sube_nivel(self):
-        self.fuerza     += 5
-        self.agilidad   += 5
-        self.vitalidad  += 5
-        self.energia    += 5
+        self.fuerza += 5
+        self.agilidad += 5
+        self.vitalidad += 5
+        self.energia += 5
 
 
 class Enemigo:
@@ -38,7 +38,6 @@ class Item:
     def __init__(self, nombre, descripcion):
         self.nombre = nombre
         self.descripcion = descripcion
-
 
 
 
