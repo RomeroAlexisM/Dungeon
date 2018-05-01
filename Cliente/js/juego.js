@@ -8,6 +8,9 @@ var Juego = {
 Juego.iniciarRecursos = function() {
   Resources.load([
     'images/mapa1.png',
+    'images/mapa2.png',
+    'images/mapa3.png',
+    'images/mapa4.png',
     'images/jugador1.png'
   ]);
   Resources.onReady(this.comenzar.bind(Juego));
@@ -31,6 +34,7 @@ Juego.buclePrincipal = function() {
 };
 
 Juego.update = function() {
+  console.log(Jugador.x + Jugador.ancho);
   // this.calcularAtaques();
   // this.moverEnemigos();
 }
@@ -88,7 +92,8 @@ Juego.dibujar = function() {
   //   var x = tamanio * i
   //   Dibujante.dibujarRectangulo('red', x, 0, tamanio, 8);
   // }
-
+  //El dibujante dibuja la linea de llegada
+  Dibujante.dibujarRectangulo('blue', 1340, 463, 30, 100);
 
 };
 
@@ -103,6 +108,20 @@ una funcionalidad similar pero para que se muevan.*/
 
 Juego.dibujarFondo = function() {
   Dibujante.dibujarImagen('images/mapa1.png', 0, 5, this.ancho, this.alto);
+  if ((Jugador.y + Jugador.alto) < 570 && (Jugador.y + Jugador.alto) > 490 ) {
+      if ((Jugador.x + Jugador.ancho) > 1360) {
+          Dibujante.borrarAreaDeJuego();
+        Dibujante.dibujarImagen('images/mapa2.png', 0, 5, this.ancho, this.alto);
+        var jugador = {'sprite': Jugador.sprite,
+                        'x':10,
+                        'y':530,
+                        'ancho': Jugador.ancho,
+                        'alto': Jugador.alto
+                      };
+      Dibujante.dibujarEntidad(jugador);
+      }
+
+  }
   // // Si se termino el juego hay que mostrar el mensaje de game over de fondo
   // if (this.terminoJuego()) {
   //   Dibujante.dibujarImagen('imagenes/mensaje_gameover.png', 0, 5, this.anchoCanvas, this.altoCanvas);
