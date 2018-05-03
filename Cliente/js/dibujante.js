@@ -5,7 +5,6 @@ No tenes que preocuparte por este archivo, solo saber como usar sus funciones. *
 
 var Dibujante = {
   canvas: document.createElement('canvas'),
-
   borrarAreaDeJuego: function () {
     this.canvas.getContext('2d').clearRect(0, 0, this.canvas.width, this.canvas.height);
   },
@@ -13,7 +12,8 @@ var Dibujante = {
   inicializarCanvas: function (anchoCanvas, altoCanvas) {
     this.canvas.width = anchoCanvas;
     this.canvas.height = altoCanvas;
-    document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+    // document.body.insertBefore(this.canvas, document.body.childNodes[0]);//inserta delspues del primer hijo del body
+    document.getElementById('contenedor').appendChild(this.canvas);
   },
 
   /* Dibuja una imagen a partir de su ruta, en la posicion x, y

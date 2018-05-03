@@ -1,8 +1,15 @@
 var Juego = {
   //configuracion de tamaño de mapa
 
-  ancho: window.innerWidth,
-  alto: window.innerHeight
+  ancho: 900,
+  alto: 500,
+
+  jugador: new Jugador( 'images/jugador1.png',131,270,15,30),
+
+  mapa:[
+    new Mapa('images/mapa1.png',0,0,0,891,360,420),
+    new Mapa('images/mapa2.png',891,360,420,0,0,0)
+  ]
 }
 
 Juego.iniciarRecursos = function() {
@@ -34,7 +41,7 @@ Juego.buclePrincipal = function() {
 };
 
 Juego.update = function() {
-  console.log(Jugador.x + Jugador.ancho);
+  // console.log("x: "+this.jugador.x+" y:"+this.jugador.y)
   // this.calcularAtaques();
   // this.moverEnemigos();
 }
@@ -42,24 +49,7 @@ Juego.update = function() {
 // Captura las teclas y si coincide con alguna de las flechas tiene que
 // hacer que el jugador principal se mueva
 Juego.capturarMovimiento = function(tecla) {
-  // var movX = 0;
-  // var movY = 0;
-  // var velocidad = this.jugador.velocidad;
-Jugador.mover(tecla);
-  // // El movimiento esta determinado por la velocidad del jugador
-  // if (tecla == 'izq') {
-  //   movX = -velocidad;
-  // }
-  // if (tecla == 'arriba') {
-  //   movY = -velocidad;
-  // }
-  // if (tecla == 'der') {
-  //   movX = velocidad;
-  // }
-  // if (tecla == 'abajo') {
-  //   movY = velocidad;
-  // }
-  //
+  this.jugador.mover(tecla);
   // // Si se puede mover hacia esa posicion hay que hacer efectivo este movimiento
   // if (this.chequearColisiones(movX + this.jugador.x, movY + this.jugador.y)) {
   //
@@ -68,12 +58,25 @@ Jugador.mover(tecla);
 };
 
 Juego.dibujar = function() {
-  // Borrar el fotograma actual
-  Dibujante.borrarAreaDeJuego();
-  //Se pinta la imagen de fondo segun el estado del juego
-  this.dibujarFondo();
+  // // Borrar el fotograma actual
+  // Dibujante.borrarAreaDeJuego();
+  // //Se pinta la imagen de fondo segun el estado del juego
+  // console.log(this.mapa);
+  for (var i = 0; i < this.mapa.length; i++) {
+    if ((this.jugador.y) < this.mapa[i].puertaSalidaYB && (this.jugador.y) > this.mapa[i].puertaSalidaYA && (this.jugador.x) == this.mapa[i].puertaSalidaX) {
+        Dibujante.borrarAreaDeJuego();
+        this.dibujarFondo(this.mapa[i+1].sprite);
+        console.log(this.mapa[i+1].sprite);
+        // this.jugador.x = 10;
+    }else {
+        Dibujante.borrarAreaDeJuego();
+        this.dibujarFondo(this.mapa[0].sprite);
+        console.log("se");
+    }
+  };
 
-  Dibujante.dibujarEntidad(Jugador);
+  // this.dibujarFondo();
+  Dibujante.dibujarEntidad(this.jugador);
 
   // Se recorren los obstaculos de la carretera pintandolos
   // this.obstaculosCarretera.forEach(function(obstaculo) {
@@ -106,36 +109,22 @@ una funcionalidad similar pero para que se muevan.*/
 //   });
 // };
 
-Juego.dibujarFondo = function() {
-  Dibujante.dibujarImagen('images/mapa1.png', 0, 5, this.ancho, this.alto);
-  if ((Jugador.y + Jugador.alto) < 570 && (Jugador.y + Jugador.alto) > 490 ) {
-      if ((Jugador.x + Jugador.ancho) > 1360) {
-          Dibujante.borrarAreaDeJuego();
-        Dibujante.dibujarImagen('images/mapa2.png', 0, 5, this.ancho, this.alto);
-        var jugador = {'sprite': Jugador.sprite,
-                        'x':10,
-                        'y':530,
-                        'ancho': Jugador.ancho,
-                        'alto': Jugador.alto
-                      };
-      Dibujante.dibujarEntidad(jugador);
-      }
+Juego.dibujarFondo = function(url) {
+  Dibujante.dibujarImagen(url, 0, 0, this.ancho, this.alto);
 
+};
+
+Juego.cambiarMapa = function() {
+  if ((this.jugador.y) < 420 && (this.jugador.y) > 360 && (this.jugador.x) == 891) {
+      Dibujante.borrarAreaDeJuego();
+      this.dibujarFondo('images/mapa2.png');
+      this.jugador.x = 10;
+      Dibujante.dibujarEntidad(this.jugador);
   }
-  // // Si se termino el juego hay que mostrar el mensaje de game over de fondo
-  // if (this.terminoJuego()) {
-  //   Dibujante.dibujarImagen('imagenes/mensaje_gameover.png', 0, 5, this.anchoCanvas, this.altoCanvas);
-  //   document.getElementById('reiniciar').style.visibility = 'visible';
-  //   Dibujante.dibujarEntidad(null);
-  // }
-// Si se gano el juego hay que mostrar el mensaje de ganoJuego de fondo
-//   else if (this.ganoJuego()) {
-//     Dibujante.dibujarImagen('imagenes/Splash.png', 190, 113, 500, 203);
-//     document.getElementById('reiniciar').style.visibility = 'visible';
-//     Dibujante.dibujarEntidad(null);
-//   } else {
-//     Dibujante.dibujarImagen('imagenes/mapa.png', 0, 5, this.anchoCanvas, this.altoCanvas);
-//   }
+};
+
+Juego.mapaIncial = function() {
+  this.dibujarFondo('images/mapa1.png');
 };
 
 Juego.iniciarRecursos();
