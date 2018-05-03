@@ -56,14 +56,14 @@ class GolpeGarrote(Ataque):
     def __init__(self):
         super().__init__(nombre="Golpe de Garrote",
                          costoMana=0,
-                         especial=8)
+                         especial=False)
 
 
 class RompeCraneos(Ataque):
     def __init__(self):
         super().__init__(nombre="Rompecráneos",
                          costoMana=0,
-                         especial=15)
+                         especial=True)
 
 # Ataques del Dragón
 
@@ -72,11 +72,11 @@ class Coletazo(Ataque):
     def __init__(self):
         super().__init__(nombre="Coletazo",
                          costoMana=0,
-                         especial=19)
+                         especial=False)
 
 
 class Llamarada(Ataque):
     def __init__(self):
         super().__init__(nombre="Llamarada",
                          costoMana=0,
-                         especial=23)
+                         especial=True)

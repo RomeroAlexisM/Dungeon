@@ -1,6 +1,4 @@
-CINCO = 5
-VALOR_REGENERACION_VIDA = .2
-VALOR_REGENERACION_MANA = .2
+
 
 
 class Entidad:
@@ -17,20 +15,10 @@ class Entidad:
     def vive(self):
         return self.ps > 0
 
-    def sube_nivel(self):
-        self.fuerza += CINCO
-        self.agilidad += CINCO
-        self.vitalidad += CINCO
-        self.energia += CINCO
-
     def atacar(self):
         pass
 
-    def renegerar_vida(self):
-        self.ps += int(self.vitalidad * VALOR_REGENERACION_VIDA)
 
-    def regenerar_mana(self):
-        self.mana += int(self.energia * VALOR_REGENERACION_MANA)
 
 
 class Item:
@@ -51,11 +39,10 @@ class Ataque:
         self.nombre = nombre
         self.costoMana = costoMana
         self.especial = especial
-    
-    def calcular_danio(self):
-        pass
 
-    def danio_especial(self, atributo_base):
-        pass
+    def calcular_danio(self, modificador, atributobase):
+        return modificador * atributobase
+
+
 
 

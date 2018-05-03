@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Servidor/clases.py" description="                              fuerza=2,&#10;          ..." line="48" />
+    <bookmark url="file://$PROJECT_DIR$/Servidor/clases.py" description="                              fuerza=2,&#10;          ..." line="36" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f73c74f8-e749-4ec5-9240-9f28caef067f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/Servidor/ataques.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/ataques.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Servidor/clases.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/clases.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Servidor/personajes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/personajes.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,7 +21,7 @@
       <file leaf-file-name="enemigos.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Servidor/enemigos.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
+            <state relative-caret-position="555">
               <caret line="37" column="38" lean-forward="true" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
@@ -29,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clases.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="clases.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Servidor/clases.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="53" column="4" lean-forward="true" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+            <state relative-caret-position="645">
+              <caret line="43" column="41" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -41,17 +42,17 @@
       <file leaf-file-name="ataques.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Servidor/ataques.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-510">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="630">
+              <caret line="42" column="40" lean-forward="true" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="personajes.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="personajes.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Servidor/personajes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="33" lean-forward="true" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+            <state relative-caret-position="919">
+              <caret line="75" column="27" lean-forward="true" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -77,9 +78,9 @@
         <option value="$PROJECT_DIR$/Servidor/classes.py" />
         <option value="$PROJECT_DIR$/Servidor/index.py" />
         <option value="$PROJECT_DIR$/Servidor/enemigos.py" />
-        <option value="$PROJECT_DIR$/Servidor/personajes.py" />
-        <option value="$PROJECT_DIR$/Servidor/ataques.py" />
         <option value="$PROJECT_DIR$/Servidor/clases.py" />
+        <option value="$PROJECT_DIR$/Servidor/ataques.py" />
+        <option value="$PROJECT_DIR$/Servidor/personajes.py" />
       </list>
     </option>
   </component>
@@ -168,12 +169,12 @@
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24980783" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24980783" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.14608434" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.14608434" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -452,7 +453,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Servidor/enemigos.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
+        <state relative-caret-position="555">
           <caret line="37" column="38" lean-forward="true" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
@@ -460,27 +461,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/personajes.py">
+    <entry file="file://$PROJECT_DIR$/Servidor/clases.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="33" lean-forward="true" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="645">
+          <caret line="43" column="41" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Servidor/ataques.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="630">
+          <caret line="42" column="40" lean-forward="true" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/clases.py">
+    <entry file="file://$PROJECT_DIR$/Servidor/personajes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="53" column="4" lean-forward="true" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+        <state relative-caret-position="919">
+          <caret line="75" column="27" lean-forward="true" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
