@@ -13,7 +13,6 @@ guerrero = Entidad(id='Guerrero',
                    items=[],
                    ataques=(golpear, ensartada))
 
-
 mago = Entidad(id='Mago',
                ps=20,
                mana=30,
@@ -24,5 +23,3 @@ mago = Entidad(id='Mago',
                exp=0,
                items=[],
                ataques=(fireball, lightingStorm))
-
-

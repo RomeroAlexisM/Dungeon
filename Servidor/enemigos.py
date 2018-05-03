@@ -5,14 +5,14 @@ rata = Entidad(id='Rata',
                ps=10,
                fuerza=2,
                agilidad=8,
-               vitalidad=6,
+               vitalidad=10,
                energia=10,
                exp=5,
                ataques=(mordisco, escupitajo))
 
 
 troll = Entidad(id='Orco',
-                ps=25,
+                ps=30,
                 fuerza=20,
                 agilidad=14,
                 vitalidad=30,
@@ -22,7 +22,7 @@ troll = Entidad(id='Orco',
 
 
 dragon = Entidad(id='Dragon',
-                 ps=45,
+                 ps=90,
                  fuerza=70,
                  agilidad=30,
                  vitalidad=90,
