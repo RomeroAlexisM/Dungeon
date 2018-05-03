@@ -15,36 +15,19 @@ var Jugador = function(sprite, x, y, ancho, alto){
     switch (tecla) {
       case 'izq':
       this.x = this.x - 10;
-      // this.sprite= 'images/jugador1.png';
-      // this.ancho= 30;
-      // this.alto= 15;
       break;
       case 'arriba':
       this.y = this.y - 10;
-      // this.sprite= 'images/jugador1.png';
-      // this.ancho= 15;
-      // this.alto= 30;
       break;
       case 'der':
       this.x = this.x + 10;
-      // this.sprite= 'images/jugador1.png';
-      // this.ancho= 30;
-      // this.alto= 15;
       break;
       case 'abajo':
       this.y = this.y + 10;
-      // this.sprite= 'images/jugador1.png';
-      // this.ancho= 15;
-      // this.alto= 30;
       break;
     }
   };
 
-  // posicionar() {
-  //
-  // }
+  Jugador.prototype.posicionar = function() {
 
-  // perderVidas(cantVidas){
-  //   this.vidas = this.vidas - cantVidas;
-  // },
-  //
+  }
