@@ -8,62 +8,62 @@ class Golpear(Ataque):
     def __init__(self):
         super().__init__(nombre="Golpear",
                          costoMana=0,
-                         danioBasico=3)
+                         especial=False)
 
 
 class Ensartada(Ataque):
     def __init__(self):
         super().__init__(nombre="Ensartada",
                          costoMana=4,
-                         danioBasico=5)
+                         especial=True)
 
-# Ataques del mago
+# Ataques del Mago
 
 
 class Fireball(Ataque):
     def __init__(self):
         super().__init__(nombre="Bola de Fuego",
                          costoMana=0,
-                         danioBasico=5)
+                         especial=False)
 
 
 class LightingStorm(Ataque):
     def __init__(self):
         super().__init__(nombre="Tormenta de rayos",
                          costoMana=8,
-                         danioBasico=8)
+                         especial=False)
 
-# Ataques de la rata
+# Ataques de la Rata
 
 
 class Mordisco(Ataque):
     def __init__(self):
         super().__init__(nombre="Mordisco",
                          costoMana=0,
-                         danioBasico=4)
+                         especial=False)
 
 
 class Escupitajo(Ataque):
     def __init__(self):
         super().__init__(nombre="Escupitajo",
                          costoMana=0,
-                         danioBasico=6)
+                         especial=True)
 
-# Ataques del orco
+# Ataques del Orco
 
 
 class GolpeGarrote(Ataque):
     def __init__(self):
         super().__init__(nombre="Golpe de Garrote",
                          costoMana=0,
-                         danioBasico=8)
+                         especial=8)
 
 
 class RompeCraneos(Ataque):
     def __init__(self):
         super().__init__(nombre="Rompecráneos",
                          costoMana=0,
-                         danioBasico=15)
+                         especial=15)
 
 # Ataques del Dragón
 
@@ -72,11 +72,11 @@ class Coletazo(Ataque):
     def __init__(self):
         super().__init__(nombre="Coletazo",
                          costoMana=0,
-                         danioBasico=19)
+                         especial=19)
 
 
 class Llamarada(Ataque):
     def __init__(self):
         super().__init__(nombre="Llamarada",
                          costoMana=0,
-                         danioBasico=23)
+                         especial=23)

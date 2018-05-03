@@ -47,8 +47,15 @@ class Item:
 
 
 class Ataque:
-    def __init__(self, nombre, costoMana, es_especial):
+    def __init__(self, nombre, costoMana, especial):
         self.nombre = nombre
         self.costoMana = costoMana
-        self.es_especial = es_especial
+        self.especial = especial
+    
+    def calcular_danio(self):
+        pass
+
+    def danio_especial(self, atributo_base):
+        pass
+
 
