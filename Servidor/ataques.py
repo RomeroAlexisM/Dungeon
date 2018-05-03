@@ -1,82 +1,77 @@
 from Servidor.clases import Ataque
 
+FUERZA = 'Fuerza'
+ENERGIA = 'Energia'
+AGILIDAD = 'Agilidad'
+VITALIDAD = 'Vitalidad'
+
 
 # Ataques del Guerrero
 
 
-class Golpear(Ataque):
-    def __init__(self):
-        super().__init__(nombre="Golpear",
-                         costoMana=0,
-                         danioBasico=3)
+golpear = Ataque(nombre="Golpear",
+                 costoMana=0,
+                 especial=False,
+                 multiplicador=FUERZA)
 
 
-class Ensartada(Ataque):
-    def __init__(self):
-        super().__init__(nombre="Ensartada",
-                         costoMana=4,
-                         danioBasico=5)
+ensartada = Ataque(nombre="Ensartada",
+                   costoMana=4,
+                   especial=True,
+                   multiplicador=FUERZA)
 
-# Ataques del mago
-
-
-class Fireball(Ataque):
-    def __init__(self):
-        super().__init__(nombre="Bola de Fuego",
-                         costoMana=0,
-                         danioBasico=5)
+# Ataques del Mago
 
 
-class LightingStorm(Ataque):
-    def __init__(self):
-        super().__init__(nombre="Tormenta de rayos",
-                         costoMana=8,
-                         danioBasico=8)
-
-# Ataques de la rata
+fireball = Ataque(nombre="Bola de Fuego",
+                  costoMana=0,
+                  especial=False,
+                  multiplicador=ENERGIA)
 
 
-class Mordisco(Ataque):
-    def __init__(self):
-        super().__init__(nombre="Mordisco",
-                         costoMana=0,
-                         danioBasico=4)
+lightingStorm = Ataque(nombre="Tormenta de rayos",
+                       costoMana=8,
+                       especial=True,
+                       multiplicador=ENERGIA)
+
+# Ataques de la Rata
 
 
-class Escupitajo(Ataque):
-    def __init__(self):
-        super().__init__(nombre="Escupitajo",
-                         costoMana=0,
-                         danioBasico=6)
-
-# Ataques del orco
+mordisco = Ataque(nombre="Mordisco",
+                  costoMana=0,
+                  especial=False,
+                  multiplicador=AGILIDAD)
 
 
-class GolpeGarrote(Ataque):
-    def __init__(self):
-        super().__init__(nombre="Golpe de Garrote",
-                         costoMana=0,
-                         danioBasico=8)
+escupitajo = Ataque(nombre="Escupitajo",
+                    costoMana=0,
+                    especial=True,
+                    multiplicador=AGILIDAD)
+
+# Ataques del Orco
 
 
-class RompeCraneos(Ataque):
-    def __init__(self):
-        super().__init__(nombre="Rompecráneos",
-                         costoMana=0,
-                         danioBasico=15)
+golpeGarrote = Ataque(nombre="Golpe de Garrote",
+                      costoMana=0,
+                      especial=False,
+                      multiplicador=FUERZA)
+
+
+rompeCraneos = Ataque(nombre="Rompecráneos",
+                      costoMana=0,
+                      especial=True,
+                      multiplicador=FUERZA)
 
 # Ataques del Dragón
 
 
-class Coletazo(Ataque):
-    def __init__(self):
-        super().__init__(nombre="Coletazo",
-                         costoMana=0,
-                         danioBasico=19)
+coletazo = Ataque(nombre="Coletazo",
+                  costoMana=0,
+                  especial=False,
+                  multiplicador=VITALIDAD)
 
 
-class Llamarada(Ataque):
-    def __init__(self):
-        super().__init__(nombre="Llamarada",
-                         costoMana=0,
-                         danioBasico=23)
+llamarada = Ataque(nombre="Llamarada",
+                   costoMana=0,
+                   especial=True,
+                   multiplicador=ENERGIA)

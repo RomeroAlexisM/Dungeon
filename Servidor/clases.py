@@ -1,69 +1,102 @@
-class Jugador:
-    def __init__(self, clase, ps, mana, fuerza, agilidad, vitalidad, energia, exp, items=[], ataques=()):
-        self.clase = clase
-        self.ps = ps
-        self.mana = mana
-        self.fuerza = fuerza
-        self.agilidad = agilidad
-        self.vitalidad = vitalidad
-        self.energia = energia
-        self.exp = exp
-        self.items = items
+MODIFICADOR_DANIO_BASICO = .15
+MODIFICADOR_DANIO_ESPECIAL = .30
+PUNTOS_NUEVO_NIVEL = 5
+VALOR_REGENERACION_VIDA = .2
+VALOR_REGENERACION_MANA = .24
+CERO = 0
+FUERZA = 'Fuerza'
+ENERGIA = 'Energia'
+AGILIDAD = 'Agilidad'
+VITALIDAD = 'Vitalidad'
+
+MENSAJE_FALTA_MANA = 'No tienes suficiente mana'
+
+
+class Entidad:
+    def __init__(self, id, mana, fuerza, agilidad, vitalidad, energia, exp, ataques):
+        self.id = str(id)
+        self.mana = int(mana)
+        self.fuerza = int(fuerza)
+        self.agilidad = int(agilidad)
+        self.vitalidad = int(vitalidad) # el valor de la vitalidad será lo máximo de vida que tendrá la barra
+        self.energia = int(energia)
+        self.exp = int(exp)
         self.ataques = ataques
 
-    def vive(self):
-        return self.ps > 0          # retornará True o False
+    def atacar(self, enemigo, ataque):
 
-    def sube_nivel(self):
-        self.fuerza += 5
-        self.agilidad += 5
-        self.vitalidad += 5
-        self.energia += 5
+        if ataque.especial:
 
-    def ataque_comun(self):
-        pass
+            if self.suficiente_mana(ataque.costoMana):
+                enemigo.ps -= self.calcular_multiplicador(ataque, MODIFICADOR_DANIO_ESPECIAL)
+                self.perder_mana(ataque.costoMana)
 
-    def ataque_especial(self):
-        pass
+            else:
+                print(MENSAJE_FALTA_MANA)
+
+        else:
+            enemigo.ps -= ataque.calcular_multiplicador(ataque, MODIFICADOR_DANIO_BASICO)
+
+    def calcular_multiplicador(self, ataque, modificador):
+        if ataque.multiplicador == FUERZA:
+            return int(self.fuerza * modificador)
+
+        elif ataque.multiplicador == ENERGIA:
+            return int(self.energia * modificador)
+
+        elif ataque.multiplicador == AGILIDAD:
+            return int(self.agilidad * modificador)
+
+        elif ataque.multiplicador == VITALIDAD:
+            return int(self.vitalidad * modificador)
 
     def renegerar_vida(self):
-        self.ps += int(self.vitalidad * 0.2)
-        pass
+        ps = int(self.vitalidad * VALOR_REGENERACION_VIDA)
+        if self.vitalidad + ps >= self.vitalidad:
+            self.ps = self.vitalidad
+
+        else:
+            self.ps += ps
 
     def regenerar_mana(self):
-        self.mana += int(self.energia * 0.2)
-        pass
+        self.mana += int(self.energia * VALOR_REGENERACION_MANA)
 
-    def recoger_item(self, item):
-        self.items.append(item)
+    def perder_mana(self, mana):
+        self.mana -= mana
 
+    def nuevo_nivel(self):
+        self.fuerza += PUNTOS_NUEVO_NIVEL
+        self.agilidad += PUNTOS_NUEVO_NIVEL
+        self.vitalidad += PUNTOS_NUEVO_NIVEL
+        self.energia += PUNTOS_NUEVO_NIVEL
 
-class Enemigo:
-    def __init__(self, nombre, ps, fuerza, agilidad, vitalidad, energia, exp, ataques=()):
-        self.nombre = str(nombre)
-        self.ps = ps
-        self.fuerza = fuerza
-        self.agilidad = agilidad
-        self.vitalidad = vitalidad
-        self.energia = energia
-        self.exp = exp
-        self.ataques = ataques
+    def suficiente_mana(self, costomana):
+        return self.mana >= costomana
 
     def vive(self):
         return self.ps > 0
 
-    def ataque_comun(self, ataque, jugador):
-        jugador.ps = jugador.ps = ataque.danioBasico
-
-
 class Item:
-    def __init__(self, nombre, descripcion):
+    def __init__(self, nombre, descripcion, equipado):
         self.nombre = nombre
         self.descripcion = descripcion
+        self.equipado = equipado
+
+
+
+    def equipar(self):
+        self.equipado = True
+
+    def desequipar(self):
+        self.equipado = False
 
 
 class Ataque:
-    def __init__(self, nombre, costoMana, danioBasico):
-        self.nombre = nombre
-        self.costoMana = costoMana
-        self.danioBasico = danioBasico
+    def __init__(self, nombre, costoMana, especial, multiplicador):
+        self.nombre = str(nombre)
+        self.costoMana = int(costoMana)
+        self.especial = bool(especial)
+        self.multiplicador = str(multiplicador)
+
+
+
