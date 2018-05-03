@@ -41,16 +41,3 @@ class Mago(Jugador):
                          exp=0,
                          items=[],
                          ataques=(Fireball, LightingStorm))
-
-    def ataque_comun(self, ataque, enemigo):
-
-        enemigo.ps = enemigo.ps - ataque.danioBasico
-
-    def ataque_especial(self, ataque, enemigo):
-
-        if ataque.costoMana <= self.mana:
-            danioAtaque = (self.energia * 0.7) + ataque.danioBasico
-            self.mana -= ataque.costoMana
-            enemigo.ps = enemigo.ps - danioAtaque
-        else:
-            print("No tienes suficiente mana")
