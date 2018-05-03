@@ -4,15 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/Servidor/clases.py" description="                              fuerza=2,&#10;          ..." line="93" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f73c74f8-e749-4ec5-9240-9f28caef067f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Servidor/items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/ataques.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/ataques.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/clases.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/clases.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/enemigos.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/enemigos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/juego.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/personajes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/personajes.py" afterDir="false" />
-    </list>
+    <list default="true" id="f73c74f8-e749-4ec5-9240-9f28caef067f" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="items.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="items.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Servidor/items.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
@@ -52,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ataques.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ataques.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Servidor/ataques.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="5" selection-end-column="23" />
+            <state relative-caret-position="-85">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -458,13 +450,6 @@
     <entry file="file://$PROJECT_DIR$/Servidor/juego.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/ataques.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Servidor/personajes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -496,6 +481,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="56" lean-forward="true" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/ataques.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
