@@ -1,7 +1,6 @@
 from Servidor.ataques import *
 from Servidor.clases import Entidad
 
-
 class Rata(Entidad):
     def __init__(self):
         super().__init__(name="Rata",
