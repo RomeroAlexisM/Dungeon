@@ -32,9 +32,6 @@ class Entidad:
     def regenerar_mana(self):
         self.mana += int(self.energia * VALOR_REGENERACION_MANA)
 
-    def recoger_item(self, item):
-        self.items.append(item)
-
 
 class Item:
     def __init__(self, nombre, descripcion, equipado):
@@ -50,7 +47,8 @@ class Item:
 
 
 class Ataque:
-    def __init__(self, nombre, costoMana, especial):
+    def __init__(self, nombre, costoMana, es_especial):
         self.nombre = nombre
         self.costoMana = costoMana
-        self.especial = especial
+        self.es_especial = es_especial
+

@@ -1,8 +1,8 @@
 from Servidor.ataques import *
-from Servidor.clases import Jugador
+from Servidor.clases import Entidad
 
 
-class Guerrero(Jugador):
+class Guerrero(Entidad):
     def __init__(self):
         super().__init__(clase="Guerrero",
                          ps=20,
@@ -29,7 +29,7 @@ class Guerrero(Jugador):
             print("No tienes suficiente mana")
 
 
-class Mago(Jugador):
+class Mago(Entidad):
     def __init__(self):
         super().__init__(clase="Mago",
                          ps=20,
