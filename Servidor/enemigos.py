@@ -1,8 +1,8 @@
 from Servidor.ataques import *
-from Servidor.clases import Enemigo
+from Servidor.clases import Entidad
 
 
-class Rata(Enemigo):
+class Rata(Entidad):
     def __init__(self):
         super().__init__(name="Rata",
                          ps=10,
@@ -14,7 +14,7 @@ class Rata(Enemigo):
                          ataques=(Mordisco, Escupitajo))
 
 
-class Troll(Enemigo):
+class Troll(Entidad):
     def __init__(self):
         super().__init__(name="Orco",
                          ps=25,
@@ -26,7 +26,7 @@ class Troll(Enemigo):
                          ataques=(GolpeGarrote, RompeCraneos))
 
 
-class Dragon(Enemigo):
+class Dragon(Entidad):
     def __init__(self):
         super().__init__(name="Dragon",
                          ps=45,
