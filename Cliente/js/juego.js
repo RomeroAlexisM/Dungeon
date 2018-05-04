@@ -62,7 +62,7 @@ Juego.buclePrincipal = function() {
 };
 
 Juego.update = function() {
-  console.log("x: "+this.jugador.x+" y:"+this.jugador.y)
+  // console.log("x: "+this.jugador.x+" y:"+this.jugador.y)
   // this.calcularAtaques();
   // this.moverEnemigos();
 }
@@ -82,29 +82,58 @@ Juego.dibujar = function() {
   for (var i = 0; i < this.mapa.length; i++) {
     if (this.pasoPorLaPuerta(this.mapa[i].numeroPuerta)) {
       // Borrar el fotograma actual
-        Dibujante.borrarAreaDeJuego();
-        //Se pinta la imagen de fondo segun el estado del juego
-        this.dibujarFondo(this.mapa[i+1].sprite);
-
-        Dibujante.dibujarEntidad(this.jugador);
-        this.mapaActual++;
-this.posicionarJugador(this.mapa[i+1].numeroMapa, this.jugador.x, this.jugador.y);
-        // console.log("se");
+      Dibujante.borrarAreaDeJuego();
+      //Se pinta la imagen de fondo segun el estado del juego
+      this.dibujarFondo(this.mapa[i+1].sprite);
+      this.posicionarJugador(this.mapa[i+1].numeroMapa);
+      Dibujante.dibujarEntidad(this.jugador);
+      this.mapaActual++;
 
     }else {
       if (i == this.mapaActual) {
         Dibujante.borrarAreaDeJuego();
+        this.resaltarSeccionMapa(this.mapa[i].numeroMapa);
         this.dibujarFondo(this.mapa[i].sprite);
-
         Dibujante.dibujarEntidad(this.jugador);
-        // this.posicionarJugador(this.mapa[i].numeroMapa);
-        // console.log("no");
+
       }
     }
   };
 
   // this.dibujarFondo();
 
+};
+
+Juego.resaltarSeccionMapa = function(numeroMapa) {
+  console.log(numeroMapa);
+  switch (numeroMapa) {
+    case 1:
+      document.getElementById('mapaCompleto').src = "images/mapaSeccion1.png";
+      break;
+    case 2:
+      document.getElementById('mapaCompleto').src = "images/mapaSeccion2.png";
+      break;
+    case 3:
+      document.getElementById('mapaCompleto').src = "images/mapaSeccion3.png";
+      break;
+    case 4:
+      document.getElementById('mapaCompleto').src = "images/mapaSeccion4.png";
+      break;
+    case 5:
+      document.getElementById('mapaCompleto').src = "images/mapaSeccion3.png";
+      break;
+    case 6:
+      document.getElementById('mapaCompleto').src = "images/mapaSeccion5.png";
+      break;
+    case 7:
+      document.getElementById('mapaCompleto').src = "images/mapaSeccion6.png";
+      break;
+    case 8:
+      document.getElementById('mapaCompleto').src = "images/mapaSeccion7.png";
+      break;
+    default:
+
+  }
 };
 
 Juego.pasoPorLaPuerta = function(numeroPuerta) {
@@ -130,7 +159,7 @@ Juego.pasoPorLaPuerta = function(numeroPuerta) {
   }
 };
 
-Juego.posicionarJugador = function(numeroMapa, posicionJugadorX, posicionJugadorY) {
+Juego.posicionarJugador = function(numeroMapa) {
   console.log(numeroMapa);
 switch (numeroMapa) {
   case 1:
