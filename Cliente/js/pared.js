@@ -1,6 +1,7 @@
-var Puerta = function(posicionXA, posicionXB, posicionYA, posicionYB){
-  this.posicionXA = posicionXA;
-  this.posicionXB = posicionXB;
-  this.posicionYA = posicionYA;
-  this.posicionYB = posicionYB;
+var Pared =function(x, y, ancho, alto, numeroMapa){
+ this.x = x;
+ this.y = y;
+ this.ancho = ancho;
+ this.alto = alto;
+ this.numeroMapa = numeroMapa;
 }

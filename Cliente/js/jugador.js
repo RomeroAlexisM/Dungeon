@@ -1,6 +1,6 @@
 /* El objeto jugador es un objeto literal que se encuentra incompleto.
  Solo tiene asignadas algunas de sus propiedades y ningun metodo */
-var Jugador = function(sprite, x, y, ancho, alto){
+var Jugador = function(sprite, x, y, ancho, alto, velocidad){
   /* el sprite contiene la ruta de la imagen
   */
   this.sprite = sprite;
@@ -8,6 +8,7 @@ var Jugador = function(sprite, x, y, ancho, alto){
  this.y = y;
  this.ancho = ancho;
  this.alto = alto;
+ this.velocidad = velocidad;
 }
 
   Jugador.prototype.mover = function(tecla){
