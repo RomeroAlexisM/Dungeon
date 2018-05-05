@@ -32,6 +32,7 @@ var Juego = {
       //mapa3
     new Pared(0,10,100,1,2),
     new Pared(0,100,240,1,2),
+    new Pared(110,0,120,1,2),
       //mapa4
     new Pared(191,10,710,1,3),
     new Pared(401,100,499,1,3),
@@ -56,11 +57,13 @@ var Juego = {
     new Pared(495,190,425,1,6),
     new Pared(605,380,140,1,6),
     new Pared(605,270,295,1,6),
+    new Pared(345,500,380,1,6),
       //mapa8
     new Pared(0,190,185,1,7),
     new Pared(0,270,185,1,7),
     new Pared(185,40,700,1,7),
     new Pared(185,430,700,1,7),
+
 
     //verticales
       //mapa1
@@ -69,6 +72,7 @@ var Juego = {
     new Pared(199,90,1,70,0),
     new Pared(871,450,1,40,0),
     new Pared(871,90,1,280,0),
+    new Pared(0,370,1,50,1),
       //mapa2
     new Pared(250,370,1,130,1),
     new Pared(100,450,1,50,1),
@@ -80,7 +84,9 @@ var Juego = {
     new Pared(471,120,1,140,3),
     new Pared(531,170,1,120,3),
     new Pared(531,370,1,120,3),
-     //mapa5 no posee paredes verticales
+    new Pared(891,0,1,100,3),
+     //mapa5
+    new Pared(0,150,1,350,4),
      //mapa6
     new Pared(350,170,1,120,5),
     new Pared(350,370,1,120,5),
@@ -88,16 +94,17 @@ var Juego = {
     new Pared(480,130,1,160,5),
     new Pared(335,0,1,130,5),
     new Pared(750,0,1,130,5),
+    new Pared(0,150,1,350,5),
       //mapa7
     new Pared(335,390,1,110,6),
     new Pared(745,380,1,120,6),
     new Pared(465,200,1,170,6),
     new Pared(605,280,1,100,6),
-
       //mapa8
     new Pared(175,50,1,140,7),
     new Pared(175,280,1,140,7),
-    new Pared(890,50,1,450,7)
+    new Pared(890,50,1,450,7),
+    new Pared(0,190,1,70,7)
   ],
 
   mapas:[
@@ -276,7 +283,7 @@ switch (numeroMapa) {
     this.jugador.x = 5;
     break;
   case 7:
-    this.jugador.y = 490;
+    this.jugador.y = 470;
     break;
   case 8:
     this.jugador.y = 5;
