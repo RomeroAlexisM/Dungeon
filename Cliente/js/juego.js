@@ -28,7 +28,7 @@ var Juego = {
     new Pared(871,450,30,1,0),
       //mapa2
     new Pared(0,360,240,1,1),
-    new Pared(0,450,110,1,1),
+    new Pared(0,450,100,1,1),
       //mapa3
     new Pared(0,10,100,1,2),
     new Pared(0,100,240,1,2),
@@ -52,29 +52,52 @@ var Juego = {
     new Pared(615,130,130,1,5),
     new Pared(340,130,145,1,5),
       //mapa7
-    new Pared(335,400,140,1,6),
-    new Pared(475,190,425,1,6),
+    new Pared(335,370,140,1,6),
+    new Pared(495,190,425,1,6),
+    new Pared(605,380,140,1,6),
     new Pared(605,270,295,1,6),
       //mapa8
     new Pared(0,190,185,1,7),
     new Pared(0,270,185,1,7),
     new Pared(185,40,700,1,7),
-    new Pared(185,430,700,1,7)
-
-
-
-
-
-
-
-
-
-
-
-
+    new Pared(185,430,700,1,7),
 
     //verticales
-    // new Pared(200,490,100,250)
+      //mapa1
+    new Pared(1,170,1,60,0),
+    new Pared(199,250,1,240,0),
+    new Pared(199,90,1,70,0),
+    new Pared(871,450,1,40,0),
+    new Pared(871,90,1,280,0),
+      //mapa2
+    new Pared(250,370,1,130,1),
+    new Pared(100,450,1,50,1),
+      //mapa3
+    new Pared(250,0,1,100,2),
+      //mapa4
+    new Pared(201,0,3,380,3),
+    new Pared(301,120,1,140,3),
+    new Pared(471,120,1,140,3),
+    new Pared(531,170,1,120,3),
+    new Pared(531,370,1,120,3),
+     //mapa5 no posee paredes verticales
+     //mapa6
+    new Pared(350,170,1,120,5),
+    new Pared(350,370,1,120,5),
+    new Pared(615,130,1,240,5),
+    new Pared(480,130,1,160,5),
+    new Pared(335,0,1,130,5),
+    new Pared(750,0,1,130,5),
+      //mapa7
+    new Pared(335,390,1,110,6),
+    new Pared(745,380,1,120,6),
+    new Pared(465,200,1,170,6),
+    new Pared(605,280,1,100,6),
+
+      //mapa8
+    new Pared(175,50,1,140,7),
+    new Pared(175,280,1,140,7),
+    new Pared(890,50,1,450,7)
   ],
 
   mapas:[
