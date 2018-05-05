@@ -76,13 +76,12 @@ class Entidad:
     def vive(self):
         return self.ps > 0
 
+
 class Item:
     def __init__(self, nombre, descripcion, equipado):
         self.nombre = nombre
         self.descripcion = descripcion
         self.equipado = equipado
-
-
 
     def equipar(self):
         self.equipado = True
@@ -97,6 +96,15 @@ class Ataque:
         self.costoMana = int(costoMana)
         self.especial = bool(especial)
         self.multiplicador = str(multiplicador)
+
+class duelo:
+    def __init__(self, jugador, oponente):
+        self.jugador = Entidad(jugador)
+        self.oponente = Entidad(oponente)
+
+    def
+
+
 
 
 
