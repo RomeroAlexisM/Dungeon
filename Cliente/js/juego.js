@@ -108,27 +108,27 @@ var Juego = {
   ],
 
   mapas:[
-    new Mapa('images/mapa1.png', 0, 1),
-    new Mapa('images/mapa2.png', 1, 2),
-    new Mapa('images/mapa4.png', 2, 3),
-    new Mapa('images/mapa3.png', 3, 4),
-    new Mapa('images/mapa4.png', 4, 5),
-    new Mapa('images/mapa5.png', 5, 6),
-    new Mapa('images/mapa6.png', 6, 7),
-    new Mapa('images/mapa7.png', 7, 8)
+    new Mapa('images/mapa/mapa1.png', 0, 1),
+    new Mapa('images/mapa/mapa2.png', 1, 2),
+    new Mapa('images/mapa/mapa4.png', 2, 3),
+    new Mapa('images/mapa/mapa3.png', 3, 4),
+    new Mapa('images/mapa/mapa4.png', 4, 5),
+    new Mapa('images/mapa/mapa5.png', 5, 6),
+    new Mapa('images/mapa/mapa6.png', 6, 7),
+    new Mapa('images/mapa/mapa7.png', 7, 8)
 
   ]
 }
 
 Juego.iniciarRecursos = function() {
   Resources.load([
-    'images/mapa1.png',
-    'images/mapa2.png',
-    'images/mapa3.png',
-    'images/mapa4.png',
-    'images/mapa5.png',
-    'images/mapa6.png',
-    'images/mapa7.png',
+    'images/mapa/mapa1.png',
+    'images/mapa/mapa2.png',
+    'images/mapa/mapa3.png',
+    'images/mapa/mapa4.png',
+    'images/mapa/mapa5.png',
+    'images/mapa/mapa6.png',
+    'images/mapa/mapa7.png',
     'images/jugador1.png'
   ]);
   Resources.onReady(this.comenzar.bind(Juego));
@@ -210,28 +210,28 @@ Juego.dibujar = function() {
 Juego.resaltarSeccionMapa = function(numeroMapa) {
   switch (numeroMapa) {
     case 1:
-      document.getElementById('mapaCompleto').src = "images/mapaSeccion1.png";
+      document.getElementById('mapaCompleto').src = "images/mapa/mapaSeccion1.png";
       break;
     case 2:
-      document.getElementById('mapaCompleto').src = "images/mapaSeccion2.png";
+      document.getElementById('mapaCompleto').src = "images/mapa/mapaSeccion2.png";
       break;
     case 3:
-      document.getElementById('mapaCompleto').src = "images/mapaSeccion3.png";
+      document.getElementById('mapaCompleto').src = "images/mapa/mapaSeccion3.png";
       break;
     case 4:
-      document.getElementById('mapaCompleto').src = "images/mapaSeccion4.png";
+      document.getElementById('mapaCompleto').src = "images/mapa/mapaSeccion4.png";
       break;
     case 5:
-      document.getElementById('mapaCompleto').src = "images/mapaSeccion3.png";
+      document.getElementById('mapaCompleto').src = "images/mapa/mapaSeccion3.png";
       break;
     case 6:
-      document.getElementById('mapaCompleto').src = "images/mapaSeccion5.png";
+      document.getElementById('mapaCompleto').src = "images/mapa/mapaSeccion5.png";
       break;
     case 7:
-      document.getElementById('mapaCompleto').src = "images/mapaSeccion6.png";
+      document.getElementById('mapaCompleto').src = "images/mapa/mapaSeccion6.png";
       break;
     case 8:
-      document.getElementById('mapaCompleto').src = "images/mapaSeccion7.png";
+      document.getElementById('mapaCompleto').src = "images/mapa/mapaSeccion7.png";
       break;
     default:
 
