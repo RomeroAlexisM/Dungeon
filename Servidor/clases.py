@@ -2,7 +2,7 @@ MODIFICADOR_DANIO_BASICO = .15
 MODIFICADOR_DANIO_ESPECIAL = .30
 PUNTOS_NUEVO_NIVEL = 5
 VALOR_REGENERACION_VIDA = .2
-VALOR_REGENERACION_MANA = .24
+VALOR_REGENERACION_MANA = .04
 CERO = 0
 FUERZA = 'Fuerza'
 ENERGIA = 'Energia'
@@ -16,7 +16,7 @@ class Entidad:
 
     def __init__(self, id, ps, mana, fuerza, agilidad, vitalidad, energia, exp, items, ataques):
         self.id = str(id)
-        self.ps = ps
+        self.ps = int(ps)
         self.mana = int(mana)
         self.fuerza = int(fuerza)
         self.agilidad = int(agilidad)
@@ -42,7 +42,7 @@ class Entidad:
             enemigo.ps -= self.calcular_multiplicador(ataque, MODIFICADOR_DANIO_BASICO)
 
     def elegir_ataque(self):
-        ataque = self.ataques[0]
+        ataque = self.ataques[1]
         return ataque # Definir en el futuro como se elige
 
     def calcular_multiplicador(self, ataque, modificador):
@@ -69,8 +69,8 @@ class Entidad:
     def regenerar_mana(self):
         self.mana += int(self.energia * VALOR_REGENERACION_MANA)
 
-    def perder_mana(self, mana):
-        self.mana -= mana
+    def perder_mana(self, costomana):
+        self.mana -= costomana
 
     def nuevo_nivel(self):
         self.fuerza += PUNTOS_NUEVO_NIVEL

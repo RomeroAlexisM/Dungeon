@@ -47,6 +47,6 @@ mago = Entidad(id='Mago',
                items=[],
                ataques=(fireball, lightingStorm))
 
-duelo = Duelo(mago, rata)
+duelo = Duelo(mago, troll)
 duelo.comenzar_duelo()
 
