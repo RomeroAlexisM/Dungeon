@@ -82,10 +82,15 @@ class Entidad:
         return self.mana >= costomana
 
     def vive(self):
-        print("Vida del",self.id," es :",self.ps)
-        return self.ps > 0
 
+        if self.ps > CERO:
+            print("Vida del", self.id, " es :", self.ps)
+            return True
 
+        else:
+            self.ps = CERO
+            print("Vida del", self.id, " es :", self.ps)
+            return False
 class Item:
     def __init__(self, nombre, descripcion, equipado):
         self.nombre = nombre
