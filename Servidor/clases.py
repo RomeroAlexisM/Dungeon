@@ -31,9 +31,9 @@ class Entidad:
 
         if ataque.especial:
 
-            if self.suficiente_mana(ataque.costoMana):
+            if self.suficiente_mana(ataque.costomana):
                 enemigo.ps -= self.calcular_multiplicador(ataque, MODIFICADOR_DANIO_ESPECIAL)
-                self.perder_mana(ataque.costoMana)
+                self.perder_mana(ataque.costomana)
 
             else:
                 print(MENSAJE_FALTA_MANA)
@@ -91,6 +91,8 @@ class Entidad:
             self.ps = CERO
             print("Vida del", self.id, " es :", self.ps)
             return False
+
+
 class Item:
     def __init__(self, nombre, descripcion, equipado):
         self.nombre = nombre
@@ -105,9 +107,9 @@ class Item:
 
 
 class Ataque:
-    def __init__(self, nombre, costoMana, especial, multiplicador):
+    def __init__(self, nombre, costomana, especial, multiplicador):
         self.nombre = str(nombre)
-        self.costoMana = int(costoMana)
+        self.costomana = int(costomana)
         self.especial = bool(especial)
         self.multiplicador = str(multiplicador)
 
@@ -118,22 +120,17 @@ class Duelo:
         self.oponente = oponente
         self.finalizado = False
 
+    def comenzar_duelo(self):
+        self.jugador_ataca_primero()
+        while not self.finalizado:
+            self.turno()
+
     def jugador_ataca_primero(self):
         if self.jugador.agilidad >= self.oponente.agilidad:
             self.jugador.ataca = True
 
         else:
             self.oponente.ataca = True
-
-    def comenzar_duelo(self):
-        self.jugador_ataca_primero()
-        while not self.finalizado:
-            self.turno()
-
-    def finalizar_duelo(self):
-        self.finalizado = True
-
-        print('El duelo ha finalizado')  # Borrar esto después de testear
 
     def turno(self):
         if self.jugador.ataca:
@@ -157,6 +154,13 @@ class Duelo:
             else:
                 self.oponente.ataca = False
                 self.finalizar_duelo()
+
+    def finalizar_duelo(self):
+        self.finalizado = True
+
+        print('El duelo ha finalizado')  # Borrar esto después de testear
+
+
 
 
 
