@@ -5,7 +5,7 @@ var Juego = {
   alto: 500,
   mapaActual: 0,
 
-  jugador: new Jugador( 'images/jugador1.png',71,190,15,30,10),
+  jugador: new Jugador('images/pj/magoDerecha.png',71,190,25,40,10,1),
 
   puertas:[
     new Puerta(890,895,360,420),
@@ -129,6 +129,22 @@ Juego.iniciarRecursos = function() {
     'images/mapa/mapa5.png',
     'images/mapa/mapa6.png',
     'images/mapa/mapa7.png',
+    'images/pj/magoAbajo.png',
+    'images/pj/magoArriba.png',
+    'images/pj/magoDerecha.png',
+    'images/pj/magoIzquierda.png',
+    'images/pj/magoIzquierdaPaso1.png',
+    'images/pj/magoIzquierdaPaso2.png',
+    'images/pj/magoIzquierdaPaso3.png',
+    'images/pj/magoIzquierdaPaso4.png',
+    'images/pj/magoIzquierdaPaso5.png',
+    'images/pj/magoDerechaPaso1.png',
+    'images/pj/magoDerechaPaso2.png',
+    'images/pj/magoDerechaPaso3.png',
+    'images/pj/magoDerechaPaso4.png',
+    'images/pj/magoDerechaPaso5.png',
+
+
     'images/jugador1.png'
   ]);
   Resources.onReady(this.comenzar.bind(Juego));
@@ -274,7 +290,7 @@ switch (numeroMapa) {
     this.jugador.y = 10;
     break;
   case 4:
-    this.jugador.x = 871;
+    this.jugador.x = 850;
     break;
   case 5:
     this.jugador.x = 5;
@@ -283,7 +299,7 @@ switch (numeroMapa) {
     this.jugador.x = 5;
     break;
   case 7:
-    this.jugador.y = 470;
+    this.jugador.y = 450;
     break;
   case 8:
     this.jugador.y = 5;
@@ -310,14 +326,14 @@ Juego.puedeMoverse = function(posicionJugadorX, posicionJugadorY) {
 /* Este metodo chequea si los elementos 1 y 2 si cruzan en x e y
  x e y representan la coordenada a la cual se quiere mover el elemento2*/
 Juego.intersecan = function(elemento1, elemento2, posicionJugadorX, posicionJugadorY) {
-  var izquierda1 = elemento1.x
-  var derecha1 = izquierda1 + elemento1.ancho
-  var techo1 = elemento1.y
-  var piso1 = techo1 + elemento1.alto
-  var izquierda2 = posicionJugadorX
-  var derecha2 = izquierda2 + elemento2.ancho
-  var techo2 = posicionJugadorY
-  var piso2 = techo2 + elemento2.alto
+  var izquierda1 = elemento1.x -10;
+  var derecha1 = izquierda1 + elemento1.ancho;
+  var techo1 = elemento1.y - 10;
+  var piso1 = techo1 + elemento1.alto;
+  var izquierda2 = posicionJugadorX;
+  var derecha2 = izquierda2 + elemento2.ancho;
+  var techo2 = posicionJugadorY;
+  var piso2 = techo2 + elemento2.alto;
 
   return ((piso1 >= techo2) && (techo1 <= piso2) &&
     (derecha1 >= izquierda2) && (izquierda1 <= derecha2))
