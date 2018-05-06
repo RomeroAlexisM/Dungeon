@@ -27,7 +27,6 @@ class Entidad:
         self.ataques = ataques
         self.ataca = False
 
-
     def atacar(self, enemigo, ataque):
 
         if ataque.especial:
@@ -40,10 +39,10 @@ class Entidad:
                 print(MENSAJE_FALTA_MANA)
 
         else:
-            enemigo.ps -= ataque.calcular_multiplicador(ataque, MODIFICADOR_DANIO_BASICO)
+            enemigo.ps -= self.calcular_multiplicador(ataque, MODIFICADOR_DANIO_BASICO)
 
     def elegir_ataque(self):
-        ataque = Ataque
+        ataque = self.ataques[0]
         return ataque # Definir en el futuro como se elige
 
     def calcular_multiplicador(self, ataque, modificador):
@@ -83,6 +82,7 @@ class Entidad:
         return self.mana >= costomana
 
     def vive(self):
+        print("Vida del",self.id," es :",self.ps)
         return self.ps > 0
 
 
@@ -106,10 +106,11 @@ class Ataque:
         self.especial = bool(especial)
         self.multiplicador = str(multiplicador)
 
+
 class Duelo:
     def __init__(self, jugador, oponente):
-        self.jugador = Entidad(jugador)
-        self.oponente = Entidad(oponente)
+        self.jugador = jugador
+        self.oponente = oponente
         self.finalizado = False
 
     def jugador_ataca_primero(self):
@@ -126,6 +127,7 @@ class Duelo:
 
     def finalizar_duelo(self):
         self.finalizado = True
+
         print('El duelo ha finalizado')  # Borrar esto después de testear
 
     def turno(self):
@@ -150,9 +152,6 @@ class Duelo:
             else:
                 self.oponente.ataca = False
                 self.finalizar_duelo()
-
-
-
 
 
 
