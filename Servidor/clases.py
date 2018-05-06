@@ -20,7 +20,7 @@ class Entidad:
         self.mana = int(mana)
         self.fuerza = int(fuerza)
         self.agilidad = int(agilidad)
-        self.vitalidad = int(vitalidad) # el valor de la vitalidad será lo máximo de vida que tendrá la barra
+        self.vitalidad = int(vitalidad)  # el valor de la vitalidad será lo máximo de vida que tendrá la barra
         self.energia = int(energia)
         self.exp = int(exp)
         self.items = items
@@ -28,13 +28,10 @@ class Entidad:
         self.ataca = False
 
     def atacar(self, enemigo, ataque):
-
         if ataque.especial:
-
             if self.suficiente_mana(ataque.costomana):
                 enemigo.ps -= self.calcular_multiplicador(ataque, MODIFICADOR_DANIO_ESPECIAL)
                 self.perder_mana(ataque.costomana)
-
             else:
                 print(MENSAJE_FALTA_MANA)
 
@@ -43,7 +40,7 @@ class Entidad:
 
     def elegir_ataque(self):
         ataque = self.ataques[1]
-        return ataque # Definir en el futuro como se elige
+        return ataque  # Definir en el futuro como se elige
 
     def calcular_multiplicador(self, ataque, modificador):
         if ataque.multiplicador == FUERZA:
@@ -159,12 +156,3 @@ class Duelo:
         self.finalizado = True
 
         print('El duelo ha finalizado')  # Borrar esto después de testear
-
-
-
-
-
-
-
-
-

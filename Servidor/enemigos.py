@@ -49,4 +49,3 @@ mago = Entidad(id='Mago',
 
 duelo = Duelo(mago, troll)
 duelo.comenzar_duelo()
-
