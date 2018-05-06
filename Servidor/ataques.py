@@ -10,13 +10,13 @@ VITALIDAD = 'Vitalidad'
 
 
 golpear = Ataque(nombre="Golpear",
-                 costoMana=0,
+                 costomana=0,
                  especial=False,
                  multiplicador=FUERZA)
 
 
 ensartada = Ataque(nombre="Ensartada",
-                   costoMana=4,
+                   costomana=4,
                    especial=True,
                    multiplicador=FUERZA)
 
@@ -24,13 +24,13 @@ ensartada = Ataque(nombre="Ensartada",
 
 
 fireball = Ataque(nombre="Bola de Fuego",
-                  costoMana=0,
+                  costomana=0,
                   especial=False,
                   multiplicador=ENERGIA)
 
 
 lightingStorm = Ataque(nombre="Tormenta de rayos",
-                       costoMana=8,
+                       costomana=8,
                        especial=True,
                        multiplicador=ENERGIA)
 
@@ -38,13 +38,13 @@ lightingStorm = Ataque(nombre="Tormenta de rayos",
 
 
 mordisco = Ataque(nombre="Mordisco",
-                  costoMana=0,
+                  costomana=0,
                   especial=False,
                   multiplicador=AGILIDAD)
 
 
 escupitajo = Ataque(nombre="Escupitajo",
-                    costoMana=0,
+                    costomana=0,
                     especial=True,
                     multiplicador=AGILIDAD)
 
@@ -52,13 +52,13 @@ escupitajo = Ataque(nombre="Escupitajo",
 
 
 golpeGarrote = Ataque(nombre="Golpe de Garrote",
-                      costoMana=0,
+                      costomana=0,
                       especial=False,
                       multiplicador=FUERZA)
 
 
 rompeCraneos = Ataque(nombre="Rompecráneos",
-                      costoMana=0,
+                      costomana=0,
                       especial=True,
                       multiplicador=FUERZA)
 
@@ -66,12 +66,12 @@ rompeCraneos = Ataque(nombre="Rompecráneos",
 
 
 coletazo = Ataque(nombre="Coletazo",
-                  costoMana=0,
+                  costomana=0,
                   especial=False,
                   multiplicador=VITALIDAD)
 
 
 llamarada = Ataque(nombre="Llamarada",
-                   costoMana=0,
+                   costomana=0,
                    especial=True,
                    multiplicador=ENERGIA)

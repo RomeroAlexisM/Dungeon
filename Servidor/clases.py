@@ -2,7 +2,7 @@ MODIFICADOR_DANIO_BASICO = .15
 MODIFICADOR_DANIO_ESPECIAL = .30
 PUNTOS_NUEVO_NIVEL = 5
 VALOR_REGENERACION_VIDA = .2
-VALOR_REGENERACION_MANA = .24
+VALOR_REGENERACION_MANA = .04
 CERO = 0
 FUERZA = 'Fuerza'
 ENERGIA = 'Energia'
@@ -16,35 +16,31 @@ class Entidad:
 
     def __init__(self, id, ps, mana, fuerza, agilidad, vitalidad, energia, exp, items, ataques):
         self.id = str(id)
-        self.ps = ps
+        self.ps = int(ps)
         self.mana = int(mana)
         self.fuerza = int(fuerza)
         self.agilidad = int(agilidad)
-        self.vitalidad = int(vitalidad) # el valor de la vitalidad será lo máximo de vida que tendrá la barra
+        self.vitalidad = int(vitalidad)  # el valor de la vitalidad será lo máximo de vida que tendrá la barra
         self.energia = int(energia)
         self.exp = int(exp)
         self.items = items
         self.ataques = ataques
         self.ataca = False
 
-
     def atacar(self, enemigo, ataque):
-
         if ataque.especial:
-
-            if self.suficiente_mana(ataque.costoMana):
+            if self.suficiente_mana(ataque.costomana):
                 enemigo.ps -= self.calcular_multiplicador(ataque, MODIFICADOR_DANIO_ESPECIAL)
-                self.perder_mana(ataque.costoMana)
-
+                self.perder_mana(ataque.costomana)
             else:
                 print(MENSAJE_FALTA_MANA)
 
         else:
-            enemigo.ps -= ataque.calcular_multiplicador(ataque, MODIFICADOR_DANIO_BASICO)
+            enemigo.ps -= self.calcular_multiplicador(ataque, MODIFICADOR_DANIO_BASICO)
 
     def elegir_ataque(self):
-        ataque = Ataque
-        return ataque # Definir en el futuro como se elige
+        ataque = self.ataques[1]
+        return ataque  # Definir en el futuro como se elige
 
     def calcular_multiplicador(self, ataque, modificador):
         if ataque.multiplicador == FUERZA:
@@ -70,8 +66,8 @@ class Entidad:
     def regenerar_mana(self):
         self.mana += int(self.energia * VALOR_REGENERACION_MANA)
 
-    def perder_mana(self, mana):
-        self.mana -= mana
+    def perder_mana(self, costomana):
+        self.mana -= costomana
 
     def nuevo_nivel(self):
         self.fuerza += PUNTOS_NUEVO_NIVEL
@@ -83,7 +79,15 @@ class Entidad:
         return self.mana >= costomana
 
     def vive(self):
-        return self.ps > 0
+
+        if self.ps > CERO:
+            print("Vida del", self.id, " es :", self.ps)
+            return True
+
+        else:
+            self.ps = CERO
+            print("Vida del", self.id, " es :", self.ps)
+            return False
 
 
 class Item:
@@ -100,17 +104,23 @@ class Item:
 
 
 class Ataque:
-    def __init__(self, nombre, costoMana, especial, multiplicador):
+    def __init__(self, nombre, costomana, especial, multiplicador):
         self.nombre = str(nombre)
-        self.costoMana = int(costoMana)
+        self.costomana = int(costomana)
         self.especial = bool(especial)
         self.multiplicador = str(multiplicador)
 
+
 class Duelo:
     def __init__(self, jugador, oponente):
-        self.jugador = Entidad(jugador)
-        self.oponente = Entidad(oponente)
+        self.jugador = jugador
+        self.oponente = oponente
         self.finalizado = False
+
+    def comenzar_duelo(self):
+        self.jugador_ataca_primero()
+        while not self.finalizado:
+            self.turno()
 
     def jugador_ataca_primero(self):
         if self.jugador.agilidad >= self.oponente.agilidad:
@@ -118,15 +128,6 @@ class Duelo:
 
         else:
             self.oponente.ataca = True
-
-    def comenzar_duelo(self):
-        self.jugador_ataca_primero()
-        while not self.finalizado:
-            self.turno()
-
-    def finalizar_duelo(self):
-        self.finalizado = True
-        print('El duelo ha finalizado')  # Borrar esto después de testear
 
     def turno(self):
         if self.jugador.ataca:
@@ -151,12 +152,7 @@ class Duelo:
                 self.oponente.ataca = False
                 self.finalizar_duelo()
 
+    def finalizar_duelo(self):
+        self.finalizado = True
 
-
-
-
-
-
-
-
-
+        print('El duelo ha finalizado')  # Borrar esto después de testear
