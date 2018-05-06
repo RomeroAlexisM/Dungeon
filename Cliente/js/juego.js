@@ -5,7 +5,7 @@ var Juego = {
   alto: 500,
   mapaActual: 0,
 
-  jugador: new Jugador('images/pj/magoDerecha.png',71,190,25,40,10,1),
+  jugador: new Jugador('images/pj/magoDerecha.png',71,190,25,40,10,1,'derecha'),
 
   puertas:[
     new Puerta(890,895,360,420),
@@ -143,6 +143,10 @@ Juego.iniciarRecursos = function() {
     'images/pj/magoDerechaPaso3.png',
     'images/pj/magoDerechaPaso4.png',
     'images/pj/magoDerechaPaso5.png',
+    'images/pj/magoAtaque1Izquierda.png',
+    'images/pj/magoAtaque1Derecha.png',
+    'images/pj/magoAtaque2Izquierda.png',
+    'images/pj/magoAtaque2Derecha.png',
 
 
     'images/jugador1.png'
@@ -168,7 +172,7 @@ Juego.buclePrincipal = function() {
 };
 
 Juego.update = function() {
-  console.log("x: "+this.jugador.x+" y:"+this.jugador.y)
+  // console.log("x: "+this.jugador.x+" y:"+this.jugador.y)
   // this.calcularAtaques();
   // this.moverEnemigos();
 }
@@ -353,7 +357,9 @@ document.addEventListener('keydown', function(e) {
     37: 'izq',
     38: 'arriba',
     39: 'der',
-    40: 'abajo'
+    40: 'abajo',
+    65: 'ataque1',
+    83: 'ataque2'
   };
 
   Juego.capturarMovimiento(allowedKeys[e.keyCode]);

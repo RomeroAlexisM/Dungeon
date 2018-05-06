@@ -1,6 +1,6 @@
 /* El objeto jugador es un objeto literal que se encuentra incompleto.
  Solo tiene asignadas algunas de sus propiedades y ningun metodo */
-var Jugador = function(sprite, x, y, ancho, alto, velocidad,pasos){
+var Jugador = function(sprite, x, y, ancho, alto, velocidad, pasos, direccion){
   /* el sprite contiene la ruta de la imagen
   */
   this.sprite = sprite;
@@ -10,11 +10,13 @@ var Jugador = function(sprite, x, y, ancho, alto, velocidad,pasos){
  this.alto = alto;
  this.velocidad = velocidad;
  this.pasos = pasos;
+ this.direccion = direccion;
 }
 
   Jugador.prototype.mover = function(tecla){
     switch (tecla) {
       case 'izq':
+      this.direccion = 'izquierda';
       if (this.pasos == 1) {
         this.sprite = 'images/pj/magoIzquierdaPaso1.png';
         this.pasos++;
@@ -37,10 +39,12 @@ var Jugador = function(sprite, x, y, ancho, alto, velocidad,pasos){
       this.x = this.x - 4;
       break;
       case 'arriba':
+      this.direccion = 'arriba';
       this.y = this.y - 4;
       this.sprite = 'images/pj/magoArriba.png';
       break;
       case 'der':
+      this.direccion = 'derecha';
       if (this.pasos == 1) {
         this.sprite = 'images/pj/magoDerechaPaso1.png';
         this.pasos++;
@@ -64,12 +68,27 @@ var Jugador = function(sprite, x, y, ancho, alto, velocidad,pasos){
       // this.sprite = 'images/pj/magoDerecha.png';
       break;
       case 'abajo':
+      this.direccion = 'abajo';
       this.y = this.y + 4;
       this.sprite = 'images/pj/magoAbajo.png';
+      break;
+      case 'ataque1':
+        if (this.direccion == 'derecha') {
+          this.sprite = 'images/pj/magoAtaque1Derecha.png';
+        }else if (this.direccion == 'izquierda') {
+          this.sprite = 'images/pj/magoAtaque1Izquierda.png';
+        }
+      break;
+      case 'ataque2':
+        if (this.direccion == 'derecha') {
+          this.sprite = 'images/pj/magoAtaque2Derecha.png';
+        }else if (this.direccion == 'izquierda') {
+          this.sprite = 'images/pj/magoAtaque2Izquierda.png';
+        }
       break;
     }
   };
 
-  Jugador.prototype.posicionar = function() {
-
-  }
+  // Jugador.prototype.direccion = function(direccion) {
+  //
+  // }
