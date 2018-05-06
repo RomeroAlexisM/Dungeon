@@ -14,6 +14,7 @@ var Jugador = function(sprite, x, y, ancho, alto, velocidad, pasos, direccion){
 }
 
   Jugador.prototype.mover = function(tecla){
+    var posicion = '';
     switch (tecla) {
       case 'izq':
       this.direccion = 'izquierda';
@@ -64,6 +65,7 @@ var Jugador = function(sprite, x, y, ancho, alto, velocidad, pasos, direccion){
         this.sprite = 'images/pj/magoDerechaPaso5.png';
         this.pasos = 1;
       }
+      console.log(posicion);
       this.x = this.x + 4;
       // this.sprite = 'images/pj/magoDerecha.png';
       break;
@@ -75,25 +77,36 @@ var Jugador = function(sprite, x, y, ancho, alto, velocidad, pasos, direccion){
       case 'ataque1':
         if (this.direccion == 'derecha') {
           this.sprite = 'images/pj/magoAtaque1Derecha.png';
+          console.log(posicion);
+          this.volverAposicionAnterior(posicion);
         }else if (this.direccion == 'izquierda') {
           this.sprite = 'images/pj/magoAtaque1Izquierda.png';
+          this.volverAposicionAnterior(posicion);
         }else if (this.direccion == 'arriba') {
           this.sprite = 'images/pj/magoAtaque1Arriba.png';
+          this.volverAposicionAnterior(posicion);
         }
         else if (this.direccion == 'abajo') {
           this.sprite = 'images/pj/magoAtaque1Abajo.png';
+          this.volverAposicionAnterior(posicion);
         }
       break;
       case 'ataque2':
         if (this.direccion == 'derecha') {
           this.sprite = 'images/pj/magoAtaque2Derecha.png';
+          this.volverAposicionAnterior(posicion);
         }else if (this.direccion == 'izquierda') {
           this.sprite = 'images/pj/magoAtaque2Izquierda.png';
+          this.volverAposicionAnterior(posicion);
         }
       break;
     }
   };
 
-  // Jugador.prototype.direccion = function(direccion) {
-  //
-  // }
+  Jugador.prototype.volverAposicionAnterior = function(posicion) {
+   setTimeout(function(){
+     console.log("cambio");
+     this.sprite = posicion;
+     console.log(posicion);
+   },2000);
+  }
