@@ -147,7 +147,8 @@ Juego.iniciarRecursos = function() {
     'images/pj/magoAtaque1Derecha.png',
     'images/pj/magoAtaque2Izquierda.png',
     'images/pj/magoAtaque2Derecha.png',
-
+    'images/pj/magoAtaque1Arriba.png',
+    'images/pj/magoAtaque1Abajo.png',
 
     'images/jugador1.png'
   ]);

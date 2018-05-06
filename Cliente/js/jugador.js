@@ -77,6 +77,11 @@ var Jugador = function(sprite, x, y, ancho, alto, velocidad, pasos, direccion){
           this.sprite = 'images/pj/magoAtaque1Derecha.png';
         }else if (this.direccion == 'izquierda') {
           this.sprite = 'images/pj/magoAtaque1Izquierda.png';
+        }else if (this.direccion == 'arriba') {
+          this.sprite = 'images/pj/magoAtaque1Arriba.png';
+        }
+        else if (this.direccion == 'abajo') {
+          this.sprite = 'images/pj/magoAtaque1Abajo.png';
         }
       break;
       case 'ataque2':
