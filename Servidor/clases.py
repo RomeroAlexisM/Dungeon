@@ -12,10 +12,12 @@ VITALIDAD = 'Vitalidad'
 MENSAJE_FALTA_MANA = 'No tienes suficiente mana'
 
 
+
 class Entidad:
 
-    def __init__(self, id, ps, mana, fuerza, agilidad, vitalidad, energia, exp, items, ataques):
+    def __init__(self, id, nivel, ps, mana, fuerza, agilidad, vitalidad, energia, exp, items, ataques):
         self.id = str(id)
+        self.nivel = int(nivel)
         self.ps = int(ps)
         self.mana = int(mana)
         self.fuerza = int(fuerza)
