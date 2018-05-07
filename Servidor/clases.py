@@ -1,9 +1,11 @@
 MODIFICADOR_DANIO_BASICO = .15
 MODIFICADOR_DANIO_ESPECIAL = .30
 PUNTOS_NUEVO_NIVEL = 5
-VALOR_REGENERACION_VIDA = .2
-VALOR_REGENERACION_MANA = .04
+VALOR_REGENERACION_VIDA = .02
+VALOR_REGENERACION_MANA = .02
 CERO = 0
+UNO = 1
+DIEZ = 10
 FUERZA = 'Fuerza'
 ENERGIA = 'Energia'
 AGILIDAD = 'Agilidad'
@@ -76,7 +78,29 @@ class Entidad:
     def perder_mana(self, costomana):
         self.mana -= costomana
 
+    def obtener_experiencia(self, enemigo):
+        diferencianivel = enemigo.nivel - self.nivel
+        experienciabaseenemigo = enemigo.exp
+
+        expobtenida = self.calcular_experiencia(diferencianivel, experienciabaseenemigo, enemigo.nivel)
+
+    def calcular_experiencia(self, diferencianivel, experienciabase, nivelenemigo):
+        if diferencianivel == CERO:
+            return int(experienciabase * .8)
+
+        elif diferencianivel < 0 or diferencianivel >DIEZ:
+            return int(experienciabase * 0.15)
+
+        elif diferencianivel > CERO and diferencianivel <= DIEZ:
+            porcentaje = self.nivel / nivelenemigo
+
+            return int(experienciabase * porcentaje)
+
+
+
+
     def nuevo_nivel(self):
+        self.nivel += UNO
         self.fuerza += PUNTOS_NUEVO_NIVEL
         self.agilidad += PUNTOS_NUEVO_NIVEL
         self.vitalidad += PUNTOS_NUEVO_NIVEL
