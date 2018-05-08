@@ -14,15 +14,15 @@ rata = Entidad(id='Rata',
                ataques=(mordisco, escupitajo))
 
 
-troll = Entidad(id='Orco',
-                nivel=5,
+troll = Entidad(id='Troll',
+                nivel=20,
                 ps=30,
                 mana=8,
                 fuerza=20,
                 agilidad=14,
                 vitalidad=30,
                 energia=10,
-                exp=15,
+                exp=5000,
                 items=[],
                 ataques=(golpeGarrote, rompeCraneos))
 
@@ -51,5 +51,7 @@ mago = Entidad(id='Mago',
                items=[],
                ataques=(fireball, lightingStorm))
 
-duelo = Duelo(mago, troll)
-duelo.comenzar_duelo()
+#duelo = Duelo(mago, troll)
+#duelo.comenzar_duelo()
+
+mago.obtener_experiencia(troll)
