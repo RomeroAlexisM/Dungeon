@@ -1,21 +1,31 @@
 MODIFICADOR_DANIO_BASICO = .15
 MODIFICADOR_DANIO_ESPECIAL = .30
 PUNTOS_NUEVO_NIVEL = 5
-VALOR_REGENERACION_VIDA = .2
-VALOR_REGENERACION_MANA = .04
+VALOR_REGENERACION_VIDA = .02
+VALOR_REGENERACION_MANA = .02
 CERO = 0
+UNO = 1
+DIEZ = 10
 FUERZA = 'Fuerza'
 ENERGIA = 'Energia'
 AGILIDAD = 'Agilidad'
 VITALIDAD = 'Vitalidad'
 
 MENSAJE_FALTA_MANA = 'No tienes suficiente mana'
+niveles = {
+           0: 0,
+           1: 50,  2: 100, 3: 200, 4: 200, 5: 400,
+           6: 750, 7: 1300, 8: 2100, 9: 3100, 10: 4650,
+           11: 6500, 12: 8800, 13: 11600, 14: 14950, 15: 18900,
+           16: 23500, 17: 28800, 18: 34850, 19: 41700, 20: 49400
+          }
 
 
 class Entidad:
 
-    def __init__(self, id, ps, mana, fuerza, agilidad, vitalidad, energia, exp, items, ataques):
+    def __init__(self, id, nivel, ps, mana, fuerza, agilidad, vitalidad, energia, exp, items, ataques):
         self.id = str(id)
+        self.nivel = int(nivel)
         self.ps = int(ps)
         self.mana = int(mana)
         self.fuerza = int(fuerza)
@@ -69,7 +79,59 @@ class Entidad:
     def perder_mana(self, costomana):
         self.mana -= costomana
 
+    def obtener_experiencia(self, enemigo):
+        diferencianivel = enemigo.nivel - self.nivel
+        expenemigo = enemigo.exp
+
+        expobtenida = self.calcular_experiencia(diferencianivel, expenemigo, enemigo.nivel)
+
+        self.sube_nivel(expobtenida)
+
+    def calcular_experiencia(self, diferencianivel, expbase, nivelenemigo):
+        if diferencianivel == CERO:
+            return int(expbase * .8)
+
+        elif diferencianivel < 0 or diferencianivel > DIEZ:
+            return int(expbase * 0.15)
+
+        elif CERO < diferencianivel <= DIEZ:
+            porcentaje = self.nivel / nivelenemigo
+
+            return int(expbase * porcentaje)
+
+    def sube_nivel(self, expobtenida):
+        expactual = self.exp
+        nivelactual = self.nivel
+
+        #  Si la experiencia conseguida no supera a la experiencia máxima del nivel, no sube
+
+        if niveles[nivelactual] > (expactual + expobtenida):
+            self.exp += expobtenida
+            print(self.exp)
+            print(expactual)
+            print(expobtenida)
+
+        #  recorro la lista desde el nivel actual hasta el final,
+        #  si la experiencia total es mayor significa que pasa de nivel,
+        #  se sube nivel automáticamente cuando detecta que supera el valor necesario
+        #  para pasar de nivel
+        else:
+            for key in [k for k in niveles if k in range(self.nivel, len(niveles))]:
+                if (expactual + expobtenida) >= niveles[key]:
+                    print(expactual + expobtenida)
+                    self.nuevo_nivel()
+                    print('subio al nivel:', self.nivel)
+                    print('VIT:', self.vitalidad, 'STR: ', self.fuerza, 'AGI: ', self.agilidad, 'ENE: ', self.energia)
+
+
+            self.exp += expobtenida
+            print('expactual', self.exp)
+
+
+        self.exp += expobtenida
+
     def nuevo_nivel(self):
+        self.nivel += UNO
         self.fuerza += PUNTOS_NUEVO_NIVEL
         self.agilidad += PUNTOS_NUEVO_NIVEL
         self.vitalidad += PUNTOS_NUEVO_NIVEL

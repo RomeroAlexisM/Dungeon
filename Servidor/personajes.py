@@ -3,6 +3,7 @@ from Servidor.clases import Entidad
 
 
 guerrero = Entidad(id='Guerrero',
+                   nivel=1,
                    ps=20,
                    mana=15,
                    fuerza=30,
@@ -14,6 +15,7 @@ guerrero = Entidad(id='Guerrero',
                    ataques=(golpear, ensartada))
 
 mago = Entidad(id='Mago',
+               nivel=1,
                ps=20,
                mana=30,
                fuerza=15,

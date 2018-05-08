@@ -2,6 +2,7 @@ from Servidor.ataques import *
 from Servidor.clases import Entidad, Duelo
 
 rata = Entidad(id='Rata',
+               nivel=2,
                ps=10,
                mana=8,
                fuerza=2,
@@ -13,19 +14,21 @@ rata = Entidad(id='Rata',
                ataques=(mordisco, escupitajo))
 
 
-troll = Entidad(id='Orco',
+troll = Entidad(id='Troll',
+                nivel=20,
                 ps=30,
                 mana=8,
                 fuerza=20,
                 agilidad=14,
                 vitalidad=30,
                 energia=10,
-                exp=15,
+                exp=5000,
                 items=[],
                 ataques=(golpeGarrote, rompeCraneos))
 
 
 dragon = Entidad(id='Dragon',
+                 nivel=40,
                  ps=90,
                  mana=8,
                  fuerza=70,
@@ -37,6 +40,7 @@ dragon = Entidad(id='Dragon',
                  ataques=(coletazo, llamarada))
 
 mago = Entidad(id='Mago',
+               nivel=1,
                ps=20,
                mana=30,
                fuerza=15,
@@ -47,5 +51,7 @@ mago = Entidad(id='Mago',
                items=[],
                ataques=(fireball, lightingStorm))
 
-duelo = Duelo(mago, troll)
-duelo.comenzar_duelo()
+#duelo = Duelo(mago, troll)
+#duelo.comenzar_duelo()
+
+mago.obtener_experiencia(troll)
