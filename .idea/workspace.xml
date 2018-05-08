@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f73c74f8-e749-4ec5-9240-9f28caef067f" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Servidor/clases/Ataque.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/clases/Duelo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/clases/Entidad.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/clases/Item.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/globales.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/clases.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/clases.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Servidor/ataques.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/ataques.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Servidor/clases.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Servidor/enemigos.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/enemigos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Servidor/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Servidor/personajes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/personajes.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,11 +23,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="clases.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Servidor/clases.py">
+      <file leaf-file-name="globales.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Servidor/globales.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-14">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Duelo.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Servidor/clases/Duelo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="675">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
             </state>
           </provider>
         </entry>
@@ -27,8 +44,8 @@
       <file leaf-file-name="enemigos.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Servidor/enemigos.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-69">
-              <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+            <state relative-caret-position="840">
+              <caret line="56" selection-start-line="56" selection-end-line="56" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -39,8 +56,11 @@
       <file leaf-file-name="ataques.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Servidor/ataques.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+            <state relative-caret-position="432">
+              <caret line="59" column="42" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
+              <folding>
+                <element signature="e#28#69#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,17 +68,42 @@
       <file leaf-file-name="personajes.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Servidor/personajes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="4" column="33" lean-forward="true" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+            <state>
+              <caret column="30" selection-start-column="30" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="items.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="items.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Servidor/items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6">
-              <caret line="8" column="46" lean-forward="true" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+            <state>
+              <caret column="37" selection-start-column="37" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Entidad.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Servidor/clases/Entidad.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-32" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Item.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Servidor/clases/Item.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ataque.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Servidor/clases/Ataque.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -72,6 +117,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <dirStrings>
+      <dir>$PROJECT_DIR$/Servidor/clases</dir>
+    </dirStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -81,19 +131,24 @@
         <option value="$PROJECT_DIR$/Servidor/classes.py" />
         <option value="$PROJECT_DIR$/Servidor/index.py" />
         <option value="$PROJECT_DIR$/Servidor/juego.py" />
-        <option value="$PROJECT_DIR$/Servidor/items.py" />
-        <option value="$PROJECT_DIR$/Servidor/personajes.py" />
-        <option value="$PROJECT_DIR$/Servidor/ataques.py" />
-        <option value="$PROJECT_DIR$/Servidor/enemigos.py" />
+        <option value="$PROJECT_DIR$/Servidor/clases/Ataque.py" />
+        <option value="$PROJECT_DIR$/Servidor/clases/Item.py" />
         <option value="$PROJECT_DIR$/Servidor/clases.py" />
+        <option value="$PROJECT_DIR$/Servidor/clases/Duelo.py" />
+        <option value="$PROJECT_DIR$/Servidor/enemigos.py" />
+        <option value="$PROJECT_DIR$/Servidor/globales.py" />
+        <option value="$PROJECT_DIR$/Servidor/ataques.py" />
+        <option value="$PROJECT_DIR$/Servidor/personajes.py" />
+        <option value="$PROJECT_DIR$/Servidor/items.py" />
+        <option value="$PROJECT_DIR$/Servidor/clases/Entidad.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1486" />
-    <option name="y" value="-4" />
-    <option name="width" value="1279" />
-    <option name="height" value="696" />
+    <option name="x" value="64" />
+    <option name="y" value="-11" />
+    <option name="width" value="1303" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -103,7 +158,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -127,10 +181,17 @@
               <item name="Dungeon" type="462c0819:PsiDirectoryNode" />
               <item name="Servidor" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Dungeon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dungeon" type="462c0819:PsiDirectoryNode" />
+              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
+              <item name="clases" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -162,7 +223,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Servidor/clases.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Servidor/globales.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -210,13 +271,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1431" y="-4" width="1295" height="772" extended-state="6" />
+    <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16216215" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1614143" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.48343372" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.48343372" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -229,7 +291,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -244,34 +305,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Cliente/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/clases.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2340">
-          <caret line="156" lean-forward="true" selection-start-line="156" selection-end-line="156" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/enemigos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Servidor/personajes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -293,7 +326,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/clases.py">
+    <entry file="file://$PROJECT_DIR$/Servidor/globales.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1620">
           <caret line="108" column="12" lean-forward="true" selection-start-line="108" selection-start-column="12" selection-end-line="108" selection-end-column="12" />
@@ -342,7 +375,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/clases.py">
+    <entry file="file://$PROJECT_DIR$/Servidor/globales.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
@@ -351,7 +384,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Servidor/index.py" />
     <entry file="file://$PROJECT_DIR$/Servidor/classes.py" />
-    <entry file="file://$PROJECT_DIR$/Servidor/clases.py">
+    <entry file="file://$PROJECT_DIR$/Servidor/globales.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="40" selection-start-line="40" selection-end-line="40" />
@@ -373,7 +406,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/clases.py">
+    <entry file="file://$PROJECT_DIR$/Servidor/globales.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
@@ -382,7 +415,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Servidor/index.py" />
     <entry file="file://$PROJECT_DIR$/Servidor/classes.py" />
-    <entry file="file://$PROJECT_DIR$/Servidor/clases.py">
+    <entry file="file://$PROJECT_DIR$/Servidor/globales.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="40" selection-start-line="40" selection-end-line="40" />
@@ -404,7 +437,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/clases.py">
+    <entry file="file://$PROJECT_DIR$/Servidor/globales.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
@@ -413,7 +446,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Servidor/index.py" />
     <entry file="file://$PROJECT_DIR$/Servidor/classes.py" />
-    <entry file="file://$PROJECT_DIR$/Servidor/clases.py">
+    <entry file="file://$PROJECT_DIR$/Servidor/globales.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="40" selection-start-line="40" selection-end-line="40" />
@@ -435,7 +468,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/clases.py">
+    <entry file="file://$PROJECT_DIR$/Servidor/globales.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
@@ -444,7 +477,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Servidor/index.py" />
     <entry file="file://$PROJECT_DIR$/Servidor/classes.py" />
-    <entry file="file://$PROJECT_DIR$/Servidor/clases.py">
+    <entry file="file://$PROJECT_DIR$/Servidor/globales.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="40" selection-start-line="40" selection-end-line="40" />
@@ -492,42 +525,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/clases.py">
+    <entry file="file://$PROJECT_DIR$/Servidor/clases/Ataque.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/clases/Item.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Servidor/enemigos.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-69">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        <state relative-caret-position="840">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/globales.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Servidor/ataques.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+        <state relative-caret-position="432">
+          <caret line="59" column="42" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
+          <folding>
+            <element signature="e#28#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/clases/Duelo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Servidor/personajes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="4" column="33" lean-forward="true" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+        <state>
+          <caret column="30" selection-start-column="30" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Servidor/items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
-          <caret line="8" column="46" lean-forward="true" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+        <state>
+          <caret column="37" selection-start-column="37" selection-end-column="37" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/clases/Entidad.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32" />
       </provider>
     </entry>
   </component>

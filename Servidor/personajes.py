@@ -1,8 +1,7 @@
 from Servidor.ataques import *
-from Servidor.clases import Entidad
+from Servidor.clases.Entidad import Entidad
 
-
-guerrero = Entidad(id='Guerrero',
+guerrero = Entidad(identificador='Guerrero',
                    nivel=1,
                    ps=20,
                    mana=15,
@@ -14,7 +13,7 @@ guerrero = Entidad(id='Guerrero',
                    items=[],
                    ataques=(golpear, ensartada))
 
-mago = Entidad(id='Mago',
+mago = Entidad(identificador='Mago',
                nivel=1,
                ps=20,
                mana=30,

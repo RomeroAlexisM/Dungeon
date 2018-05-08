@@ -1,30 +1,10 @@
-MODIFICADOR_DANIO_BASICO = .15
-MODIFICADOR_DANIO_ESPECIAL = .30
-PUNTOS_NUEVO_NIVEL = 5
-VALOR_REGENERACION_VIDA = .02
-VALOR_REGENERACION_MANA = .02
-CERO = 0
-UNO = 1
-DIEZ = 10
-FUERZA = 'Fuerza'
-ENERGIA = 'Energia'
-AGILIDAD = 'Agilidad'
-VITALIDAD = 'Vitalidad'
-
-MENSAJE_FALTA_MANA = 'No tienes suficiente mana'
-niveles = {
-           0: 0,
-           1: 50,  2: 100, 3: 200, 4: 200, 5: 400,
-           6: 750, 7: 1300, 8: 2100, 9: 3100, 10: 4650,
-           11: 6500, 12: 8800, 13: 11600, 14: 14950, 15: 18900,
-           16: 23500, 17: 28800, 18: 34850, 19: 41700, 20: 49400
-          }
+from Servidor.globales import *
 
 
 class Entidad:
 
-    def __init__(self, id, nivel, ps, mana, fuerza, agilidad, vitalidad, energia, exp, items, ataques):
-        self.id = str(id)
+    def __init__(self, identificador, nivel, ps, mana, fuerza, agilidad, vitalidad, energia, exp, items, ataques):
+        self.identificador = str(identificador)
         self.nivel = int(nivel)
         self.ps = int(ps)
         self.mana = int(mana)
@@ -123,10 +103,8 @@ class Entidad:
                     print('subio al nivel:', self.nivel)
                     print('VIT:', self.vitalidad, 'STR: ', self.fuerza, 'AGI: ', self.agilidad, 'ENE: ', self.energia)
 
-
             self.exp += expobtenida
             print('expactual', self.exp)
-
 
         self.exp += expobtenida
 
@@ -143,78 +121,10 @@ class Entidad:
     def vive(self):
 
         if self.ps > CERO:
-            print("Vida del", self.id, " es :", self.ps)
+            print("Vida del", self.identificador, " es :", self.ps)
             return True
 
         else:
             self.ps = CERO
-            print("Vida del", self.id, " es :", self.ps)
+            print("Vida del", self.identificador, " es :", self.ps)
             return False
-
-
-class Item:
-    def __init__(self, nombre, descripcion, equipado):
-        self.nombre = nombre
-        self.descripcion = descripcion
-        self.equipado = equipado
-
-    def equipar(self):
-        self.equipado = True
-
-    def desequipar(self):
-        self.equipado = False
-
-
-class Ataque:
-    def __init__(self, nombre, costomana, especial, multiplicador):
-        self.nombre = str(nombre)
-        self.costomana = int(costomana)
-        self.especial = bool(especial)
-        self.multiplicador = str(multiplicador)
-
-
-class Duelo:
-    def __init__(self, jugador, oponente):
-        self.jugador = jugador
-        self.oponente = oponente
-        self.finalizado = False
-
-    def comenzar_duelo(self):
-        self.jugador_ataca_primero()
-        while not self.finalizado:
-            self.turno()
-
-    def jugador_ataca_primero(self):
-        if self.jugador.agilidad >= self.oponente.agilidad:
-            self.jugador.ataca = True
-
-        else:
-            self.oponente.ataca = True
-
-    def turno(self):
-        if self.jugador.ataca:
-            self.jugador.atacar(self.oponente, self.jugador.elegir_ataque())
-
-            if self.oponente.vive():
-                self.jugador.ataca = False
-                self.oponente.ataca = True
-
-            else:
-                self.jugador.ataca = False
-                self.finalizar_duelo()
-
-        else:
-            self.oponente.atacar(self.jugador, self.oponente.elegir_ataque())
-
-            if self.jugador.vive():
-                self.oponente.ataca = False
-                self.jugador.ataca = True
-
-            else:
-                self.oponente.ataca = False
-                self.finalizar_duelo()
-
-    def finalizar_duelo(self):
-        self.finalizado = True
-
-        print('El duelo ha finalizado')  # Borrar esto después de testear
