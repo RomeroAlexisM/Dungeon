@@ -96,7 +96,7 @@ class Entidad:
         #  se sube nivel automáticamente cuando detecta que supera el valor necesario
         #  para pasar de nivel
         else:
-            for key in [k for k in niveles if k in range(self.nivel, len(niveles))]:
+            for key in [key for key in niveles if key in range(self.nivel, len(niveles))]:
                 if (expactual + expobtenida) >= niveles[key]:
                     print(expactual + expobtenida)
                     self.nuevo_nivel()
