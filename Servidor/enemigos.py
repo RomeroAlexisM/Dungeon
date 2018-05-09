@@ -1,7 +1,9 @@
+from Servidor.ClasesPadre.Duelo import Duelo
+from Servidor.SubClases.Ente.ClasesEnte.Enemigo import Enemigo
+from Servidor.SubClases.Ente.ClasesEnte.Jugador import Jugador
 from Servidor.ataques import *
-from Servidor.ClasesPadre.Entidad import Entidad
 
-rata = Entidad(identificador='Rata',
+rata = Enemigo(identificador='Rata',
                nivel=2,
                ps=10,
                mana=8,
@@ -14,7 +16,7 @@ rata = Entidad(identificador='Rata',
                ataques=(mordisco, escupitajo))
 
 
-troll = Entidad(identificador='Troll',
+troll = Enemigo(identificador='Troll',
                 nivel=20,
                 ps=30,
                 mana=8,
@@ -27,7 +29,7 @@ troll = Entidad(identificador='Troll',
                 ataques=(golpeGarrote, rompeCraneos))
 
 
-dragon = Entidad(identificador='Dragon',
+dragon = Enemigo(identificador='Dragon',
                  nivel=40,
                  ps=90,
                  mana=8,
@@ -39,7 +41,7 @@ dragon = Entidad(identificador='Dragon',
                  items=[],
                  ataques=(coletazo, llamarada))
 
-mago = Entidad(identificador='Mago',
+mago = Jugador(identificador='Mago',
                nivel=1,
                ps=20,
                mana=30,
@@ -53,4 +55,4 @@ mago = Entidad(identificador='Mago',
 
 #  duelo = Duelo(mago, troll)
 #  duelo.comenzar_duelo()
-mago.obtener_experiencia(troll)
+#  mago.obtener_experiencia(troll)

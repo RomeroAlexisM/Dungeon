@@ -213,7 +213,7 @@ Juego.dibujar = function() {
       //Se pinta la imagen de fondo segun el estado del juego
       this.dibujarFondo(this.mapas[i+1].sprite);
       this.posicionarJugador(this.mapas[i+1].numeroMapa);
-      Dibujante.dibujarEntidad(this.jugador);
+      Dibujante.dibujarEnte(this.jugador);
       this.mapaActual++;
 
     }else {
@@ -221,7 +221,7 @@ Juego.dibujar = function() {
         Dibujante.borrarAreaDeJuego();
         this.resaltarSeccionMapa(this.mapas[i].numeroMapa);
         this.dibujarFondo(this.mapas[i].sprite);
-        Dibujante.dibujarEntidad(this.jugador);
+        Dibujante.dibujarEnte(this.jugador);
 
       }
     }
