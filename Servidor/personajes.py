@@ -1,5 +1,5 @@
 from Servidor.ataques import *
-from Servidor.clases.Entidad import Entidad
+from Servidor.ClasesPadre.Entidad import Entidad
 
 guerrero = Entidad(identificador='Guerrero',
                    nivel=1,

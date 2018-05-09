@@ -1,4 +1,4 @@
-from Servidor.clases.Ataque import Ataque
+from Servidor.ClasesPadre.Ataque import Ataque
 from Servidor.globales import FUERZA, ENERGIA, AGILIDAD, VITALIDAD
 
 

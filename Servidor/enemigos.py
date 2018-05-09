@@ -1,5 +1,5 @@
 from Servidor.ataques import *
-from Servidor.clases.Entidad import Entidad
+from Servidor.ClasesPadre.Entidad import Entidad
 
 rata = Entidad(identificador='Rata',
                nivel=2,

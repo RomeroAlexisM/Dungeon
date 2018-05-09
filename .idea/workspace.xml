@@ -2,9 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f73c74f8-e749-4ec5-9240-9f28caef067f" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Servidor/SubClases/Entidad/ClasesEntidad/Enemigo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/SubClases/Entidad/ClasesEntidad/Jugador.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/SubClases/Entidad/enemigos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/SubClases/Entidad/jugables.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/SubClases/Item/ClasesItem/Consumible.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/SubClases/Item/ClasesItem/Equipable.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/SubClases/Item/Consumible/ClasesConsumibles/Pocion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/SubClases/Item/Consumible/pociones.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Arma/dosmanos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Arma/unamano.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Armadura/brazo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Armadura/cabeza.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Armadura/pantalon.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Armadura/pecho.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Armadura/pies.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/ClasesEquipable/Arma.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/ClasesEquipable/Armadura.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/ClasesEquipable/Joya.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/ClasesEquipable/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Joyeria/Anillo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Joyeria/Pendante.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/clases/Entidad.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/clases/Entidad.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Servidor/ataques.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/ataques.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Servidor/clases/Ataque.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/ClasesPadre/Ataque.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Servidor/clases/Duelo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/ClasesPadre/Duelo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Servidor/clases/Entidad.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/ClasesPadre/Entidad.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Servidor/clases/Item.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/ClasesPadre/Item.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Servidor/enemigos.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/enemigos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Servidor/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Servidor/personajes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/personajes.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,7 +41,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Pocion.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Servidor/SubClases/Item/Consumible/ClasesConsumibles/Pocion.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -47,6 +80,33 @@
         <option value="$PROJECT_DIR$/Servidor/clases/Entidad.py" />
         <option value="$PROJECT_DIR$/Servidor/enemigos.py" />
         <option value="$PROJECT_DIR$/Servidor/clases/Item.py" />
+        <option value="$PROJECT_DIR$/Servidor/Subclases/Entidad/Enemigo.py" />
+        <option value="$PROJECT_DIR$/Servidor/Subclases/Entidad/Jugador.py" />
+        <option value="$PROJECT_DIR$/Servidor/Subclases/Item/Cabeza.py" />
+        <option value="$PROJECT_DIR$/Servidor/Subclases/Item/Pecho.py" />
+        <option value="$PROJECT_DIR$/Servidor/Subclases/Item/Guantes.py" />
+        <option value="$PROJECT_DIR$/Servidor/Subclases/Item/Anillo.py" />
+        <option value="$PROJECT_DIR$/Servidor/Subclases/Item/Pendante.py" />
+        <option value="$PROJECT_DIR$/Servidor/Subclases/Item/Botas.py" />
+        <option value="$PROJECT_DIR$/Servidor/Subclases/Item/Armadura/Pantalon.py" />
+        <option value="$PROJECT_DIR$/Servidor/Subclases/Item/Consumible/pocion.py" />
+        <option value="$PROJECT_DIR$/Servidor/Subclases/Item/Equipable/Arma/UnaMano.py" />
+        <option value="$PROJECT_DIR$/Servidor/Subclases/Item/Equipable/Armadura/pecho.py" />
+        <option value="$PROJECT_DIR$/Servidor/Subclases/Item/Equipable/Armadura/cabeza.py" />
+        <option value="$PROJECT_DIR$/Servidor/Subclases/Item/Equipable/Armadura/pies.py" />
+        <option value="$PROJECT_DIR$/Servidor/Subclases/Item/Equipable/Armadura/pantalon.py" />
+        <option value="$PROJECT_DIR$/Servidor/Subclases/Item/Equipable/Armadura/brazo.py" />
+        <option value="$PROJECT_DIR$/Servidor/Subclases/Item/Equipable/Arma/unamano.py" />
+        <option value="$PROJECT_DIR$/Servidor/Subclases/Item/Equipable/Arma/dosmanos.py" />
+        <option value="$PROJECT_DIR$/Servidor/Subclases/Item/Consumible/pociones.py" />
+        <option value="$PROJECT_DIR$/Servidor/Subclases/Clases/Enemigo.py" />
+        <option value="$PROJECT_DIR$/Servidor/Subclases/Clases/Jugador.py" />
+        <option value="$PROJECT_DIR$/Servidor/Hijos/ClasesHijas/Consumible.py" />
+        <option value="$PROJECT_DIR$/Servidor/Hijos/ClasesHijas/Equipable.py" />
+        <option value="$PROJECT_DIR$/Servidor/Hijos/ClasesHijas/Arma.py" />
+        <option value="$PROJECT_DIR$/Servidor/Hijos/ClasesHijas/Armadura.py" />
+        <option value="$PROJECT_DIR$/Servidor/Hijos/ClasesHijas/Joya.py" />
+        <option value="$PROJECT_DIR$/Servidor/SubClases/Item/Consumible/ClasesConsumibles/Pocion.py" />
       </list>
     </option>
   </component>
@@ -92,7 +152,14 @@
               <item name="Dungeon" type="b2602c69:ProjectViewProjectNode" />
               <item name="Dungeon" type="462c0819:PsiDirectoryNode" />
               <item name="Servidor" type="462c0819:PsiDirectoryNode" />
-              <item name="clases" type="462c0819:PsiDirectoryNode" />
+              <item name="SubClases" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Dungeon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dungeon" type="462c0819:PsiDirectoryNode" />
+              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
+              <item name="SubClases" type="462c0819:PsiDirectoryNode" />
+              <item name="Entidad" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -103,6 +170,15 @@
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="costoMana&#9;null&#9;null" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/ClasesEquipable" />
+      <recent name="$PROJECT_DIR$/Servidor/SubClases/Item/ClasesItem" />
+      <recent name="$PROJECT_DIR$/Servidor/SubClases/Entidad/ClasesEntidad" />
+      <recent name="$PROJECT_DIR$/Servidor/SubClases" />
+      <recent name="$PROJECT_DIR$/Servidor/Subclases/Item/Equipable" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -182,13 +258,13 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20292082" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.27259037" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27259037" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3990964" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3990964" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -210,162 +286,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Servidor/personajes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/ataques.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cliente/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/globales.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="108" column="12" lean-forward="true" selection-start-line="108" selection-start-column="12" selection-end-line="108" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/personajes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/ataques.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cliente/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/enemigos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/ataques.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-513">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/personajes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/globales.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/index.py" />
-    <entry file="file://$PROJECT_DIR$/Servidor/classes.py" />
-    <entry file="file://$PROJECT_DIR$/Servidor/globales.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/enemigos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/index.py" />
-    <entry file="file://$PROJECT_DIR$/Servidor/enemigos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/globales.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/index.py" />
-    <entry file="file://$PROJECT_DIR$/Servidor/classes.py" />
-    <entry file="file://$PROJECT_DIR$/Servidor/globales.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/enemigos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/index.py" />
-    <entry file="file://$PROJECT_DIR$/Servidor/enemigos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="32" lean-forward="true" selection-start-column="32" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/globales.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/index.py" />
-    <entry file="file://$PROJECT_DIR$/Servidor/classes.py" />
-    <entry file="file://$PROJECT_DIR$/Servidor/globales.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/enemigos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/index.py" />
     <entry file="file://$PROJECT_DIR$/Servidor/enemigos.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -451,7 +371,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/clases/Entidad.py">
+    <entry file="file://$PROJECT_DIR$/Servidor/ClasesPadre/Entidad.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
@@ -472,26 +392,116 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/clases/Item.py">
+    <entry file="file://$PROJECT_DIR$/Servidor/ClasesPadre/Item.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="52" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/clases/Duelo.py">
+    <entry file="file://$PROJECT_DIR$/Servidor/ClasesPadre/Duelo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
           <caret line="45" selection-start-line="45" selection-end-line="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/clases/Ataque.py">
+    <entry file="file://$PROJECT_DIR$/Servidor/ClasesPadre/Ataque.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/Subclases/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/SubClases/Entidad/enemigos.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/SubClases/Entidad/jugables.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/Subclases/Item/Equipable/Armadura/Cabeza.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/Subclases/Item/Equipable/Armadura/Pecho.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/Subclases/Item/Equipable/Armadura/Brazo.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Joyeria/Anillo.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/Subclases/Item/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/Subclases/Item/Equipable/Arma/UnaMano.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/Subclases/Item/Consumible/pocion.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/Subclases/Item/Equipable/Armadura/Pantalon.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/Subclases/Item/Equipable/Armadura/Pies.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Joyeria/Pendante.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Armadura/pecho.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Armadura/cabeza.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Armadura/pies.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Armadura/pantalon.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Armadura/brazo.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Arma/dosmanos.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/SubClases/Item/Consumible/pociones.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/SubClases/Entidad/ClasesEntidad/Enemigo.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Arma/unamano.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/SubClases/Entidad/ClasesEntidad/Jugador.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/SubClases/Item/ClasesItem/Consumible.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/SubClases/Item/ClasesItem/Equipable.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/ClasesEquipable/Arma.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/ClasesEquipable/Armadura.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/ClasesEquipable/Joya.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/SubClases/Entidad/ClasesEntidad/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/SubClases/Item/Consumible/ClasesConsumibles/Pocion.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
