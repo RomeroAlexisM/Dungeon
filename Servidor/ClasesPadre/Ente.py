@@ -68,3 +68,9 @@ class Ente:
             self.ps = CERO
             print("Vida del", self.identificador, " es :", self.ps)
             return False
+
+    def recoger(self, item):
+        self.items.append(item)
+
+    def soltar(self, item):
+        self.items.pop(item)

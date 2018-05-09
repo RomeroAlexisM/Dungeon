@@ -10,12 +10,4 @@ anilloDeMagia = Item(nombre='Anillo de magia',
                      descripcion='Aumenta ligeramente el mana',
                      equipado=False)
 
-brazaleteDeFuerza = Item(nombre='Brazalete de fuerza',
-                         descripcion='Aumenta la fuerza',
-                         equipado=False)
-
-guanteDeAgilidad = Item(nombre='Guante de agilidad',
-                        descripcion='Aumenta la agilidad',
-                        equipado=False)
-
-items = [anilloDeVida, anilloDeMagia, brazaleteDeFuerza]
+items = [anilloDeVida, anilloDeMagia]
