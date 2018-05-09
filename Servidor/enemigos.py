@@ -53,4 +53,4 @@ mago = Entidad(identificador='Mago',
 
 #  duelo = Duelo(mago, troll)
 #  duelo.comenzar_duelo()
-#  mago.obtener_experiencia(troll)
+mago.obtener_experiencia(troll)
