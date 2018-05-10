@@ -1,4 +1,4 @@
-from Servidor.ClasesPadre.Ente import Ente
+from Servidor.core.src.Entidades.Ente import Ente
 from Servidor.globales import niveles, PUNTOS_NUEVO_NIVEL, UNO, DIEZ, CERO
 
 

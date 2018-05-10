@@ -1,4 +1,4 @@
-from Servidor.ClasesPadre.Item import Item
+from Servidor.core.src.Entidades.Item import Item
 
 # Los items por ahora no van a interferir, mas a delante veo como meto los efectos
 

@@ -1,5 +1,5 @@
-from Servidor.ataques import *
-from Servidor.ClasesPadre.Ente import Ente
+from Servidor.core.src.Persistencia.ataques import *
+from Servidor.core.src.Entidades.Ente import Ente
 
 guerrero = Ente(identificador='Guerrero',
                    nivel=1,

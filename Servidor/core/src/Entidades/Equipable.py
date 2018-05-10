@@ -1,4 +1,4 @@
-from Servidor.ClasesPadre.Item import Item
+from Servidor.core.src.Entidades.Item import Item
 
 
 class Equipable(Item):

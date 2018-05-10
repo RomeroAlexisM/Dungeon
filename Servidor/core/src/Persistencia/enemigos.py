@@ -1,7 +1,7 @@
-from Servidor.ClasesPadre.Duelo import Duelo
-from Servidor.SubClases.Ente.Enemigo import Enemigo
-from Servidor.SubClases.Ente.Jugador import Jugador
-from Servidor.ataques import *
+from Servidor.core.src.Entidades.Duelo import Duelo
+from Servidor.core.src.Entidades.Enemigo import Enemigo
+from Servidor.core.src.Entidades.Jugador import Jugador
+from Servidor.core.src.Persistencia.ataques import *
 
 rata = Enemigo(identificador='Rata',
                nivel=2,

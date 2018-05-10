@@ -1,5 +1,5 @@
 import random
-from Servidor.ClasesPadre.Ente import Ente
+from Servidor.core.src.Entidades.Ente import Ente
 from Servidor.globales import MODIFICADOR_DANIO_ESPECIAL, MODIFICADOR_DANIO_BASICO
 
 
