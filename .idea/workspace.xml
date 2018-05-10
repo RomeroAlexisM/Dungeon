@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f73c74f8-e749-4ec5-9240-9f28caef067f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Ente/ClasesEnte/Enemigo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/SubClases/Ente/Enemigo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Ente/ClasesEnte/Jugador.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/SubClases/Ente/Jugador.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Ente/enemigos.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/SubClases/Ente/enemigos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Item/ClasesItem/Consumible.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/SubClases/Item/Consumible.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Item/ClasesItem/Equipable.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Item/Consumible/ClasesConsumibles/Pocion.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/SubClases/Item/Consumible/Pocion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/api/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -109,8 +103,8 @@
       <file leaf-file-name="Ente.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Servidor/ClasesPadre/Ente.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="165">
+              <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -234,6 +228,12 @@
               <item name="Dungeon" type="462c0819:PsiDirectoryNode" />
               <item name="Servidor" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Dungeon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dungeon" type="462c0819:PsiDirectoryNode" />
+              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -327,7 +327,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20292082" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -586,8 +585,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Servidor/ClasesPadre/Ente.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="165">
+          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
         </state>
       </provider>
     </entry>
