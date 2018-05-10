@@ -1,6 +1,6 @@
 from Servidor.ClasesPadre.Duelo import Duelo
-from Servidor.SubClases.Ente.ClasesEnte.Enemigo import Enemigo
-from Servidor.SubClases.Ente.ClasesEnte.Jugador import Jugador
+from Servidor.SubClases.Ente.Enemigo import Enemigo
+from Servidor.SubClases.Ente.Jugador import Jugador
 from Servidor.ataques import *
 
 rata = Enemigo(identificador='Rata',
