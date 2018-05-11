@@ -1,5 +1,5 @@
 from Servidor.core.src.Entidades.Ataque import Ataque
-from Servidor.globales import FUERZA, ENERGIA, AGILIDAD, VITALIDAD
+from Servidor.core.globales import FUERZA, ENERGIA, AGILIDAD, VITALIDAD
 
 
 #  Ataques del Guerrero

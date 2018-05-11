@@ -1,4 +1,4 @@
-from Servidor.globales import *
+from Servidor.core.globales import *
 
 
 class Ente:

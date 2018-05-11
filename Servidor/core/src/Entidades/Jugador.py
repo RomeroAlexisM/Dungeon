@@ -1,5 +1,5 @@
 from Servidor.core.src.Entidades.Ente import Ente
-from Servidor.globales import niveles, PUNTOS_NUEVO_NIVEL, UNO, DIEZ, CERO
+from Servidor.core.globales import niveles, PUNTOS_NUEVO_NIVEL, UNO, DIEZ, CERO
 
 
 class Jugador(Ente):

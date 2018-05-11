@@ -2,48 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f73c74f8-e749-4ec5-9240-9f28caef067f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Servidor/core/src/Servicios/ArmaService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Servidor/core/src/Servicios/ArmaduraService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Servidor/core/src/Servicios/AtaqueService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Servidor/core/src/Servicios/ConsumibleService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Servidor/core/src/Servicios/DueloService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Servidor/core/src/Servicios/EnemigoService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Servidor/core/src/Servicios/EnteService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Servidor/core/src/Servicios/EquipableService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Servidor/core/src/Servicios/ItemService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Servidor/core/src/Servicios/JoyaService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Servidor/core/src/Servicios/JugadorService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Servidor/core/src/Servicios/PendanteService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Servidor/core/src/Servicios/PocionService.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servidor/api/run.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/ClasesPadre/Ataque.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Entidades/Ataque.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/ClasesPadre/Duelo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Entidades/Duelo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/ClasesPadre/Ente.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Entidades/Ente.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/ClasesPadre/Item.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Entidades/Item.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Ente/Enemigo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Entidades/Enemigo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Ente/Jugador.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Entidades/Jugador.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Ente/enemigos.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Persistencia/enemigos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Ente/jugables.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Persistencia/jugables.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Item/Consumible.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Entidades/Consumible.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Item/Consumible/Pocion.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Entidades/Pocion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Item/Consumible/pociones.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Persistencia/pociones.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Entidades/Equipable.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Arma/dosmanos.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Persistencia/dosmanos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Arma/unamano.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Persistencia/unamano.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Armadura/brazo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Persistencia/brazo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Armadura/cabeza.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Persistencia/cabeza.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Armadura/pantalon.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Persistencia/pantalon.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Armadura/pecho.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Persistencia/pecho.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Armadura/pies.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Persistencia/pies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/ClasesEquipable/Arma.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Entidades/Arma.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/ClasesEquipable/Armadura.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Entidades/Armadura.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/ClasesEquipable/Joya.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Entidades/Joya.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/ClasesEquipable/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/ClasesEquipable/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Servicios/AnilloService.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Joyeria/Anillo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Entidades/Anillo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/SubClases/Item/Equipable/Joyeria/Pendante.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Entidades/Pendante.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/ataques.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Persistencia/ataques.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Persistencia/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Servidor/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/api/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Servidor/core/src/Entidades/Enemigo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Entidades/Enemigo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Servidor/core/src/Entidades/Ente.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Entidades/Ente.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Servidor/core/src/Entidades/Jugador.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Entidades/Jugador.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Servidor/core/src/Persistencia/ataques.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Persistencia/ataques.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Servidor/globales.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/globales.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,7 +19,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="run.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Servidor/api/run.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -80,7 +52,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Servidor/Subclases/Item/Anillo.py" />
         <option value="$PROJECT_DIR$/Servidor/Subclases/Item/Pendante.py" />
         <option value="$PROJECT_DIR$/Servidor/Subclases/Item/Botas.py" />
         <option value="$PROJECT_DIR$/Servidor/Subclases/Item/Armadura/Pantalon.py" />
@@ -131,14 +102,15 @@
         <option value="$PROJECT_DIR$/Servidor/core/src/Servicios/JugadorService.py" />
         <option value="$PROJECT_DIR$/Servidor/core/src/Servicios/PendanteService.py" />
         <option value="$PROJECT_DIR$/Servidor/core/src/Entidades/PocionService.py" />
+        <option value="$PROJECT_DIR$/Servidor/api/run.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="791" />
     <option name="y" value="-4" />
-    <option name="width" value="570" />
-    <option name="height" value="748" />
+    <option name="width" value="568" />
+    <option name="height" value="740" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -159,18 +131,13 @@
             <path>
               <item name="Dungeon" type="b2602c69:ProjectViewProjectNode" />
               <item name="Dungeon" type="462c0819:PsiDirectoryNode" />
-              <item name="Cliente" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Dungeon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Dungeon" type="462c0819:PsiDirectoryNode" />
-              <item name="Cliente" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Dungeon" type="b2602c69:ProjectViewProjectNode" />
               <item name="Dungeon" type="462c0819:PsiDirectoryNode" />
               <item name="Servidor" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Dungeon" type="b2602c69:ProjectViewProjectNode" />
@@ -185,6 +152,14 @@
               <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Dungeon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dungeon" type="462c0819:PsiDirectoryNode" />
+              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Entidades" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -197,11 +172,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Servidor/core" />
       <recent name="$PROJECT_DIR$/Servidor/core/src/Servicios" />
       <recent name="$PROJECT_DIR$/Servidor/core/src/Persistencia" />
       <recent name="$PROJECT_DIR$/Servidor/core/src/Entidades" />
       <recent name="$PROJECT_DIR$/Servidor/SubClases/Item/Consumible" />
-      <recent name="$PROJECT_DIR$/Servidor/SubClases/Item" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -216,7 +191,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.enemigos">
+  <component name="RunManager" selected="Python.run">
     <configuration name="classes" type="PythonConfigurationType" factoryName="Python">
       <module name="Dungeon" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -229,7 +204,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Servidor/globales.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Servidor/core/globales.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -253,12 +228,32 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Dungeon" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Servidor/api" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Servidor/api/run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list>
       <item itemvalue="Python.classes" />
       <item itemvalue="Python.enemigos" />
+      <item itemvalue="Python.run" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.run" />
         <item itemvalue="Python.enemigos" />
       </list>
     </recent_temporary>
@@ -278,13 +273,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20292082" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.0436747" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.06927711" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -393,7 +389,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/globales.py">
+    <entry file="file://$PROJECT_DIR$/Servidor/core/globales.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
@@ -402,7 +398,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Servidor/index.py" />
     <entry file="file://$PROJECT_DIR$/Servidor/classes.py" />
-    <entry file="file://$PROJECT_DIR$/Servidor/globales.py">
+    <entry file="file://$PROJECT_DIR$/Servidor/core/globales.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="40" selection-start-line="40" selection-end-line="40" />
@@ -450,20 +446,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/globales.py">
+    <entry file="file://$PROJECT_DIR$/Servidor/core/globales.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Entidades/Enemigo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -508,9 +494,6 @@
           <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Entidades/Anillo.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Servidor/core/src/Entidades/Ataque.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -587,6 +570,22 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Servidor/core/src/Servicios/ArmaduraService.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Entidades/Anillo.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Entidades/Enemigo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/api/run.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
