@@ -1,17 +1,21 @@
-from Servidor.core.globales import *
+from Servidor.core.src.Entidades.globales import MENSAJE_FALTA_MANA, MODIFICADOR_DANIO_BASICO, FUERZA, ENERGIA, \
+    AGILIDAD, VALOR_REGENERACION_MANA, VALOR_REGENERACION_VIDA, VITALIDAD, CERO
 
 
 class Ente:
 
-    def __init__(self, identificador, nivel, ps, mana, fuerza, agilidad, vitalidad, energia, exp, items, ataques):
-        self.identificador = str(identificador)
+    def __init__(self, nombre, nivel, ps, mana, fuerza, agilidad, vitalidad, energia, defensafisica, defensamagica, estado, exp, items, ataques):
+        self.nombre = str(nombre)
         self.nivel = int(nivel)
         self.ps = int(ps)
         self.mana = int(mana)
         self.fuerza = int(fuerza)
         self.agilidad = int(agilidad)
-        self.vitalidad = int(vitalidad)  # el valor de la vitalidad será lo máximo de vida que tendrá la barra
+        self.vitalidad = int(vitalidad)
         self.energia = int(energia)
+        self.defensafisica = int(defensafisica)
+        self.defensamagica = int(defensamagica)
+        self.estado = str(estado)
         self.exp = int(exp)
         self.items = items
         self.ataques = ataques
@@ -20,6 +24,7 @@ class Ente:
     def atacar(self, oponente, ataque):
         if ataque.especial:
             if self.suficiente_mana(ataque.costomana):
+                from Servidor.core.src.Entidades.globales import MODIFICADOR_DANIO_ESPECIAL
                 oponente.ps -= self.calcular_multiplicador(ataque, MODIFICADOR_DANIO_ESPECIAL)
                 self.perder_mana(ataque.costomana)
             else:
