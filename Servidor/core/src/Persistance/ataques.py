@@ -1,19 +1,13 @@
-from Servidor.clases import Ataque
-
-FUERZA = 'Fuerza'
-ENERGIA = 'Energia'
-AGILIDAD = 'Agilidad'
-VITALIDAD = 'Vitalidad'
+from Servidor.core.src.Entidades.Ataque import Ataque
+from Servidor.core.globales import FUERZA, ENERGIA, AGILIDAD, VITALIDAD
 
 
-# Ataques del Guerrero
-
+#  Ataques del Guerrero
 
 golpear = Ataque(nombre="Golpear",
                  costomana=0,
                  especial=False,
                  multiplicador=FUERZA)
-
 
 ensartada = Ataque(nombre="Ensartada",
                    costomana=4,
@@ -22,12 +16,10 @@ ensartada = Ataque(nombre="Ensartada",
 
 # Ataques del Mago
 
-
 fireball = Ataque(nombre="Bola de Fuego",
                   costomana=0,
                   especial=False,
                   multiplicador=ENERGIA)
-
 
 lightingStorm = Ataque(nombre="Tormenta de rayos",
                        costomana=8,
@@ -42,7 +34,6 @@ mordisco = Ataque(nombre="Mordisco",
                   especial=False,
                   multiplicador=AGILIDAD)
 
-
 escupitajo = Ataque(nombre="Escupitajo",
                     costomana=0,
                     especial=True,
@@ -50,12 +41,10 @@ escupitajo = Ataque(nombre="Escupitajo",
 
 # Ataques del Orco
 
-
 golpeGarrote = Ataque(nombre="Golpe de Garrote",
                       costomana=0,
                       especial=False,
                       multiplicador=FUERZA)
-
 
 rompeCraneos = Ataque(nombre="Rompecráneos",
                       costomana=0,
@@ -69,7 +58,6 @@ coletazo = Ataque(nombre="Coletazo",
                   costomana=0,
                   especial=False,
                   multiplicador=VITALIDAD)
-
 
 llamarada = Ataque(nombre="Llamarada",
                    costomana=0,

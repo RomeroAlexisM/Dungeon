@@ -1,7 +1,10 @@
-from Servidor.ataques import *
-from Servidor.clases import Entidad, Duelo
+from Servidor.core.src.Entidades.Duelo import Duelo
+from Servidor.core.src.Entidades.Enemigo import Enemigo
+from Servidor.core.src.Entidades.Jugador import Jugador
+from Servidor.core.src.Persistencia.ataques import *
 
-rata = Entidad(id='Rata',
+rata = Enemigo(identificador='Rata',
+               nivel=2,
                ps=10,
                mana=8,
                fuerza=2,
@@ -13,19 +16,21 @@ rata = Entidad(id='Rata',
                ataques=(mordisco, escupitajo))
 
 
-troll = Entidad(id='Orco',
+troll = Enemigo(identificador='Troll',
+                nivel=20,
                 ps=30,
                 mana=8,
                 fuerza=20,
                 agilidad=14,
                 vitalidad=30,
                 energia=10,
-                exp=15,
+                exp=5000,
                 items=[],
                 ataques=(golpeGarrote, rompeCraneos))
 
 
-dragon = Entidad(id='Dragon',
+dragon = Enemigo(identificador='Dragon',
+                 nivel=40,
                  ps=90,
                  mana=8,
                  fuerza=70,
@@ -36,7 +41,10 @@ dragon = Entidad(id='Dragon',
                  items=[],
                  ataques=(coletazo, llamarada))
 
-mago = Entidad(id='Mago',
+#  ESTE MAGO ES PARA TESTEAR (LUEGO SE IMPLEMENTARAN TEST UNITARIOS)
+
+mago = Jugador(identificador='Mago',
+               nivel=1,
                ps=20,
                mana=30,
                fuerza=15,
@@ -49,3 +57,4 @@ mago = Entidad(id='Mago',
 
 duelo = Duelo(mago, troll)
 duelo.comenzar_duelo()
+mago.obtener_experiencia(troll)
