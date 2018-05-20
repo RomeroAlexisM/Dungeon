@@ -169,56 +169,9 @@ Juego.enableInputs = function(){
     });
 }
 
-<<<<<<< HEAD
 Juego.comenzar = function() {
-=======
-// Captura las teclas y si coincide con alguna de las flechas tiene que
-// hacer que el jugador principal se mueva
-Juego.capturarMovimiento = function(tecla) {
-  var movX = 0;
-  var movY = 0;
-  var velocidad = this.jugador.velocidad;
-  // El movimiento esta determinado por la velocidad del jugador
-  if (tecla == 'izq') {
-    movX = -velocidad;
-  }
-  if (tecla == 'arriba') {
-    movY = -velocidad;
-  }
-  if (tecla == 'der') {
-    movX = velocidad;
-  }
-  if (tecla == 'abajo') {
-    movY = velocidad;
-  }
-
-  // Si se puede mover hacia esa posicion hay que hacer efectivo este movimiento
-  if (this.puedeMoverse(movX + this.jugador.x, movY + this.jugador.y)) {
-  this.jugador.mover(tecla);
-
-  }
 };
 
-Juego.dibujar = function() {
-  for (var i = 0; i < this.mapas.length; i++) {
-    if (this.pasoPorLaPuerta(this.mapas[i].numeroPuerta)) {
-      // Borrar el fotograma actual
-      Dibujante.borrarAreaDeJuego();
-      //Se pinta la imagen de fondo segun el estado del juego
-      this.dibujarFondo(this.mapas[i+1].sprite);
-      this.posicionarJugador(this.mapas[i+1].numeroMapa);
-      Dibujante.dibujarEnte(this.jugador);
-      this.mapaActual++;
-
-    }else {
-      if (i == this.mapaActual) {
-        Dibujante.borrarAreaDeJuego();
-        this.resaltarSeccionMapa(this.mapas[i].numeroMapa);
-        this.dibujarFondo(this.mapas[i].sprite);
-        Dibujante.dibujarEnte(this.jugador);
->>>>>>> e3a543a51f8305a6042a298ed45aa79c3ea3a335
-
-};
 
 Juego.resaltarSeccionMapa = function(numeroMapa) {
   switch (numeroMapa) {
