@@ -3,9 +3,13 @@ var Juego = {
 
   ancho: 900,
   alto: 500,
-  mapaActual: 0,
-
-  jugador: new Jugador('images/pj/magoDerecha.png',71,190,25,40,10,1,'derecha'),
+  mapaActual: 1,
+  pressing: [],
+  KEY_LEFT: 37,
+  KEY_RIGHT: 39,
+  KEY_UP: 38,
+  KEY_DOWN: 40,
+  entidad: new Entidad(10, ['images/pj/guerreroCaminar1.png'], {width: 32, height: 42}, {stand: [1, 1], run: [9, 16], up: [18, 18], down: [19, 19]}),
 
   puertas:[
     new Puerta(890,895,360,420),
@@ -20,91 +24,91 @@ var Juego = {
   paredes:[
     //horizontales
       //mapa1
-    new Pared(190,80,680,1,0),
-    new Pared(190,490,680,1,0),
-    new Pared(0,160,190,1,0),
-    new Pared(0,250,190,1,0),
-    new Pared(871,360,30,1,0),
-    new Pared(871,450,30,1,0),
+    new Pared(190,80,680,1,1),
+    new Pared(190,490,680,1,1),
+    new Pared(0,160,190,1,1),
+    new Pared(0,250,190,1,1),
+    new Pared(871,360,30,1,1),
+    new Pared(871,450,30,1,1),
       //mapa2
-    new Pared(0,360,240,1,1),
-    new Pared(0,450,100,1,1),
+    new Pared(0,360,240,1,2),
+    new Pared(0,450,100,1,2),
       //mapa3
-    new Pared(0,10,100,1,2),
-    new Pared(0,100,240,1,2),
-    new Pared(110,0,120,1,2),
+    new Pared(0,10,100,1,3),
+    new Pared(0,100,240,1,3),
+    new Pared(110,0,120,1,3),
       //mapa4
-    new Pared(191,10,710,1,3),
-    new Pared(401,100,499,1,3),
-    new Pared(301,120,180,1,3),
-    new Pared(401,250,68,1,3),
-    new Pared(401,290,130,1,3),
-    new Pared(191,370,340,1,3),
-    new Pared(531,170,369,1,3),
-    new Pared(531,490,369,1,3),
+    new Pared(191,10,710,1,4),
+    new Pared(401,100,499,1,4),
+    new Pared(301,120,180,1,4),
+    new Pared(401,250,68,1,4),
+    new Pared(401,290,130,1,4),
+    new Pared(191,370,340,1,4),
+    new Pared(531,170,369,1,4),
+    new Pared(531,490,369,1,4),
       //mapa5
-    new Pared(0,170,900,1,4),
-    new Pared(0,490,900,1,4),
+    new Pared(0,170,900,1,5),
+    new Pared(0,490,900,1,5),
       //mapa6
-    new Pared(0,170,345,1,5),
-    new Pared(0,490,345,1,5),
-    new Pared(345,290,130,1,5),
-    new Pared(345,370,270,1,5),
-    new Pared(615,130,130,1,5),
-    new Pared(340,130,145,1,5),
+    new Pared(0,170,345,1,6),
+    new Pared(0,490,345,1,6),
+    new Pared(345,290,130,1,6),
+    new Pared(345,370,270,1,6),
+    new Pared(615,130,130,1,6),
+    new Pared(340,130,145,1,6),
       //mapa7
-    new Pared(335,370,140,1,6),
-    new Pared(495,190,425,1,6),
-    new Pared(605,380,140,1,6),
-    new Pared(605,270,295,1,6),
-    new Pared(345,500,380,1,6),
+    new Pared(335,370,140,1,7),
+    new Pared(495,190,425,1,7),
+    new Pared(605,380,140,1,7),
+    new Pared(605,270,295,1,7),
+    new Pared(345,500,380,1,7),
       //mapa8
-    new Pared(0,190,185,1,7),
-    new Pared(0,270,185,1,7),
-    new Pared(185,40,700,1,7),
-    new Pared(185,430,700,1,7),
+    new Pared(0,190,185,1,8),
+    new Pared(0,270,185,1,8),
+    new Pared(185,40,700,1,8),
+    new Pared(185,430,700,1,8),
 
 
     //verticales
       //mapa1
-    new Pared(1,170,1,60,0),
-    new Pared(199,250,1,240,0),
-    new Pared(199,90,1,70,0),
-    new Pared(871,450,1,40,0),
-    new Pared(871,90,1,280,0),
+    new Pared(1,170,1,60,1),
+    new Pared(199,250,1,240,1),
+    new Pared(199,90,1,70,1),
+    new Pared(871,450,1,40,1),
+    new Pared(871,90,1,280,1),
     new Pared(0,370,1,50,1),
       //mapa2
-    new Pared(250,370,1,130,1),
-    new Pared(100,450,1,50,1),
+    new Pared(250,370,1,130,2),
+    new Pared(100,450,1,50,2),
       //mapa3
-    new Pared(250,0,1,100,2),
+    new Pared(250,0,1,100,3),
       //mapa4
-    new Pared(201,0,3,380,3),
-    new Pared(301,120,1,140,3),
-    new Pared(471,120,1,140,3),
-    new Pared(531,170,1,120,3),
-    new Pared(531,370,1,120,3),
-    new Pared(891,0,1,100,3),
+    new Pared(201,0,3,380,4),
+    new Pared(301,120,1,140,4),
+    new Pared(471,120,1,140,4),
+    new Pared(531,170,1,120,4),
+    new Pared(531,370,1,120,4),
+    new Pared(891,0,1,100,4),
      //mapa5
-    new Pared(0,150,1,350,4),
-     //mapa6
-    new Pared(350,170,1,120,5),
-    new Pared(350,370,1,120,5),
-    new Pared(615,130,1,240,5),
-    new Pared(480,130,1,160,5),
-    new Pared(335,0,1,130,5),
-    new Pared(750,0,1,130,5),
     new Pared(0,150,1,350,5),
+     //mapa6
+    new Pared(350,170,1,120,6),
+    new Pared(350,370,1,120,6),
+    new Pared(615,130,1,240,6),
+    new Pared(480,130,1,160,6),
+    new Pared(335,0,1,130,6),
+    new Pared(750,0,1,130,6),
+    new Pared(0,150,1,350,6),
       //mapa7
-    new Pared(335,390,1,110,6),
-    new Pared(745,380,1,120,6),
-    new Pared(465,200,1,170,6),
-    new Pared(605,280,1,100,6),
+    new Pared(335,390,1,110,7),
+    new Pared(745,380,1,120,7),
+    new Pared(465,200,1,170,7),
+    new Pared(605,280,1,100,7),
       //mapa8
-    new Pared(175,50,1,140,7),
-    new Pared(175,280,1,140,7),
-    new Pared(890,50,1,450,7),
-    new Pared(0,190,1,70,7)
+    new Pared(175,50,1,140,8),
+    new Pared(175,280,1,140,8),
+    new Pared(890,50,1,450,8),
+    new Pared(0,190,1,70,8)
   ],
 
   mapas:[
@@ -117,8 +121,8 @@ var Juego = {
     new Mapa('images/mapa/mapa6.png', 6, 7),
     new Mapa('images/mapa/mapa7.png', 7, 8)
 
-  ]
-}
+  ],
+};
 
 Juego.iniciarRecursos = function() {
   Resources.load([
@@ -131,101 +135,42 @@ Juego.iniciarRecursos = function() {
     'images/mapa/mapa7.png',
     'images/pj/magoAbajo.png',
     'images/pj/magoArriba.png',
-    'images/pj/magoDerecha.png',
-    'images/pj/magoIzquierda.png',
-    'images/pj/magoIzquierdaPaso1.png',
-    'images/pj/magoIzquierdaPaso2.png',
-    'images/pj/magoIzquierdaPaso3.png',
-    'images/pj/magoIzquierdaPaso4.png',
-    'images/pj/magoIzquierdaPaso5.png',
-    'images/pj/magoDerechaPaso1.png',
-    'images/pj/magoDerechaPaso2.png',
-    'images/pj/magoDerechaPaso3.png',
-    'images/pj/magoDerechaPaso4.png',
-    'images/pj/magoDerechaPaso5.png',
-    'images/pj/magoAtaque1Izquierda.png',
-    'images/pj/magoAtaque1Derecha.png',
-    'images/pj/magoAtaque2Izquierda.png',
-    'images/pj/magoAtaque2Derecha.png',
-    'images/pj/magoAtaque1Arriba.png',
-    'images/pj/magoAtaque1Abajo.png',
+    'images/pj/magoCaminar.png',
+    'images/pj/guerreroCaminar1.png'
 
-    'images/jugador1.png'
   ]);
   Resources.onReady(this.comenzar.bind(Juego));
 };
 
-Juego.comenzar = function() {
-  // Inicializar el canvas del juego
-  Dibujante.inicializarCanvas(this.ancho, this.alto);
-  /* El bucle principal del juego se llamara continuamente para actualizar
-  los movimientos y el pintado de la pantalla.*/
-  this.buclePrincipal();
-};
+$(document).ready(function(){
+  Juego.iniciarRecursos();
+  Juego.enableInputs();
+  Juego.mapas.forEach(function(mapa){
+    if (Juego.pasoPorLaPuerta(mapa.numeroPuerta)) {
+      console.log("paso por una puerta");
+      dibujarFondo(mapa.sprite);
+      dibujarPersonaje(Juego.entidad);
+    }else if (mapa.numeroMapa == Juego.mapaActual) {
+      console.log("no");
+      dibujarFondo(mapa.sprite);
+      dibujarPersonaje(Juego.entidad);
+    }
+  });
+});
 
-Juego.buclePrincipal = function() {
-  // Con update se actualiza la logica del juego, tanto ataques como movimientos
-  this.update();
-  // Funcion que dibuja por cada fotograma a los objetos en pantalla.
-  this.dibujar();
-  // Esto es una forma de llamar a la funcion Juego.buclePrincipal() repetidas veces
-  window.requestAnimationFrame(this.buclePrincipal.bind(this));
-};
+//camptura las teclas
+Juego.enableInputs = function(){
+    document.addEventListener('keydown', function(evt) { // Cuando se pulsa la tecla
+        Juego.pressing[evt.keyCode] = true;
+    });
 
-Juego.update = function() {
-  // console.log("x: "+this.jugador.x+" y:"+this.jugador.y)
-  // this.calcularAtaques();
-  // this.moverEnemigos();
+    document.addEventListener('keyup', function(evt) { // Cuando se relaja la tecla
+        Juego.pressing[evt.keyCode] = false;
+    });
 }
 
-// Captura las teclas y si coincide con alguna de las flechas tiene que
-// hacer que el jugador principal se mueva
-Juego.capturarMovimiento = function(tecla) {
-  var movX = 0;
-  var movY = 0;
-  var velocidad = this.jugador.velocidad;
-  // El movimiento esta determinado por la velocidad del jugador
-  if (tecla == 'izq') {
-    movX = -velocidad;
-  }
-  if (tecla == 'arriba') {
-    movY = -velocidad;
-  }
-  if (tecla == 'der') {
-    movX = velocidad;
-  }
-  if (tecla == 'abajo') {
-    movY = velocidad;
-  }
+Juego.comenzar = function() {
 
-  // Si se puede mover hacia esa posicion hay que hacer efectivo este movimiento
-  if (this.puedeMoverse(movX + this.jugador.x, movY + this.jugador.y)) {
-  this.jugador.mover(tecla);
-
-  }
-};
-
-Juego.dibujar = function() {
-  for (var i = 0; i < this.mapas.length; i++) {
-    if (this.pasoPorLaPuerta(this.mapas[i].numeroPuerta)) {
-      // Borrar el fotograma actual
-      Dibujante.borrarAreaDeJuego();
-      //Se pinta la imagen de fondo segun el estado del juego
-      this.dibujarFondo(this.mapas[i+1].sprite);
-      this.posicionarJugador(this.mapas[i+1].numeroMapa);
-      Dibujante.dibujarEntidad(this.jugador);
-      this.mapaActual++;
-
-    }else {
-      if (i == this.mapaActual) {
-        Dibujante.borrarAreaDeJuego();
-        this.resaltarSeccionMapa(this.mapas[i].numeroMapa);
-        this.dibujarFondo(this.mapas[i].sprite);
-        Dibujante.dibujarEntidad(this.jugador);
-
-      }
-    }
-  };
 };
 
 Juego.resaltarSeccionMapa = function(numeroMapa) {
@@ -263,20 +208,20 @@ Juego.pasoPorLaPuerta = function(numeroPuerta) {
   for (var i = 0; i < this.puertas.length; i++) {
     if (i == numeroPuerta) {
       if (numeroPuerta == 2) {
-        return((this.jugador.y) > this.puertas[i].posicionYA && (this.jugador.y) <
-                this.puertas[i].posicionYB && (this.jugador.x) <
-                this.puertas[i].posicionXA && (this.jugador.x) >
+        return((sprite.y) > this.puertas[i].posicionYA && (sprite.y) <
+                this.puertas[i].posicionYB && (sprite.x) <
+                this.puertas[i].posicionXA && (sprite.x) >
                 this.puertas[i].posicionXB);
       }
       if (numeroPuerta == 5) {
-        return((this.jugador.y) < this.puertas[i].posicionYA && (this.jugador.y) >
-                this.puertas[i].posicionYB && (this.jugador.x) >
-                this.puertas[i].posicionXA && (this.jugador.x) <
+        return((sprite.y) < this.puertas[i].posicionYA && (sprite.y) >
+                this.puertas[i].posicionYB && (sprite.x) >
+                this.puertas[i].posicionXA && (sprite.x) <
                 this.puertas[i].posicionXB);
       }
-      return((this.jugador.y) > this.puertas[i].posicionYA && (this.jugador.y) <
-              this.puertas[i].posicionYB && (this.jugador.x) >
-              this.puertas[i].posicionXA && (this.jugador.x) <
+      return((sprite.y) > this.puertas[i].posicionYA && (sprite.y) <
+              this.puertas[i].posicionYB && (sprite.x) >
+              this.puertas[i].posicionXA && (sprite.x) <
               this.puertas[i].posicionXB);
     }
   }
@@ -285,26 +230,26 @@ Juego.pasoPorLaPuerta = function(numeroPuerta) {
 Juego.posicionarJugador = function(numeroMapa) {
 switch (numeroMapa) {
   case 1:
-    this.jugador.x = 71;
-    this.jugador.y = 190;
+    sprite.x = 71;
+    sprite.y = 190;
     break;
   case 2:
-    this.jugador.x = 10;
+    sprite.x = 10;
     break;
   case 3:
-    this.jugador.y = 10;
+    sprite.y = 10;
     break;
   case 4:
-    this.jugador.x = 850;
+    sprite.x = 850;
     break;
   case 5:
-    this.jugador.x = 5;
+    sprite.x = 5;
     break;
   case 6:
-    this.jugador.x = 5;
+    sprite.x = 5;
     break;
   case 7:
-    this.jugador.y = 450;
+    sprite.y = 450;
     break;
   case 8:
     this.jugador.y = 5;
@@ -320,48 +265,45 @@ Juego.puedeMoverse = function(posicionJugadorX, posicionJugadorY) {
   var puedeMoverse = true
   this.paredes.forEach(function(pared) {
     if (pared.numeroMapa == this.mapaActual) {
-      if (this.intersecan(pared, this.jugador, posicionJugadorX, posicionJugadorY)) {
-        puedeMoverse = false
+      //no esta bien pero por el momento funciona
+      if (this.pressing[this.KEY_LEFT]) {
+        if (this.intersecan(pared, this.entidad, posicionJugadorX - 1, posicionJugadorY)) {
+          puedeMoverse = false;
+        }
+      }
+      if (this.pressing[this.KEY_RIGHT]) {
+        if (this.intersecan(pared, this.entidad, posicionJugadorX + 1, posicionJugadorY)) {
+          puedeMoverse = false;
+        }
+      }
+      if (this.pressing[this.KEY_UP]) {
+        if (this.intersecan(pared, this.entidad, posicionJugadorX, posicionJugadorY - 1)) {
+          puedeMoverse = false;
+        }
+      }
+      if (this.pressing[this.KEY_DOWN]) {
+        if (this.intersecan(pared, this.entidad, posicionJugadorX, posicionJugadorY + 1)) {
+          puedeMoverse = false;
+        }
       }
     }
   }, this)
   return puedeMoverse
 };
 
-/* Este metodo chequea si los elementos 1 y 2 si cruzan en x e y
- x e y representan la coordenada a la cual se quiere mover el elemento2*/
-Juego.intersecan = function(elemento1, elemento2, posicionJugadorX, posicionJugadorY) {
-  var izquierda1 = elemento1.x -10;
-  var derecha1 = izquierda1 + elemento1.ancho;
-  var techo1 = elemento1.y - 10;
-  var piso1 = techo1 + elemento1.alto;
+// /* Este metodo chequea si los elementos 1 y 2 si cruzan en x e y
+//  x e y representan la coordenada a la cual se quiere mover el elemento2*/
+Juego.intersecan = function(pared, jugador, posicionJugadorX, posicionJugadorY) {
+  // console.log(posicionJugadorX);
+  var izquierda1 = pared.x + 10;
+  var derecha1 = izquierda1 + pared.ancho;
+  var techo1 = pared.y + 10;
+  var piso1 = techo1 + pared.alto;
   var izquierda2 = posicionJugadorX;
-  var derecha2 = izquierda2 + elemento2.ancho;
+  var derecha2 = izquierda2 + jugador.frames.width;
   var techo2 = posicionJugadorY;
-  var piso2 = techo2 + elemento2.alto;
+  var piso2 = techo2 + jugador.frames.height;
 
   return ((piso1 >= techo2) && (techo1 <= piso2) &&
     (derecha1 >= izquierda2) && (izquierda1 <= derecha2))
 };
-
-Juego.dibujarFondo = function(url) {
-  Dibujante.dibujarImagen(url, 0, 0, this.ancho, this.alto);
-
-};
-
-Juego.iniciarRecursos();
-
-// Activa las lecturas del teclado al presionar teclas
-// Documentacion: https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener
-document.addEventListener('keydown', function(e) {
-  var allowedKeys = {
-    37: 'izq',
-    38: 'arriba',
-    39: 'der',
-    40: 'abajo',
-    65: 'ataque1',
-    83: 'ataque2'
-  };
-
-  Juego.capturarMovimiento(allowedKeys[e.keyCode]);
-});
