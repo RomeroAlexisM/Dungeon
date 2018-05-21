@@ -1,3 +1,15 @@
+var servidor = 'http://127.0.0.1:5000';
+
+function peticionGet() {
+
+ axios.get(servidor + '/playable/all/').then(function(response) {
+   console.log(response.data);
+    }).catch(function(error) {
+   console.log(error);
+ });
+ }
+ peticionGet();
+
 var Juego = {
   //configuracion de tamaño de mapa
 
@@ -143,20 +155,21 @@ Juego.iniciarRecursos = function() {
 };
 
 $(document).ready(function(){
-  Juego.iniciarRecursos();
-  Juego.enableInputs();
-  Juego.mapas.forEach(function(mapa){
-    if (Juego.pasoPorLaPuerta(mapa.numeroPuerta)) {
-      console.log("paso por una puerta");
-      dibujarFondo(mapa.sprite);
-      dibujarPersonaje(Juego.entidad);
-    }else if (mapa.numeroMapa == Juego.mapaActual) {
-      console.log("no");
-      dibujarFondo(mapa.sprite);
-      dibujarPersonaje(Juego.entidad);
-    }
-  });
+  if (Juego.seSeleccionoUnPersonaje()) {
+    Juego.iniciarRecursos();
+    Juego.enableInputs();
+    Juego.mapas.forEach(function(mapa){
+      if (mapa.numeroMapa == Juego.mapaActual) {
+        dibujarFondo(mapa.sprite);
+        dibujarPersonaje(Juego.entidad);
+      }
+    });
+  }
 });
+
+Juego.seSeleccionoUnPersonaje = function(){
+  return true;
+};
 
 //camptura las teclas
 Juego.enableInputs = function(){

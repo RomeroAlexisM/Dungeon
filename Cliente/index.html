@@ -9,21 +9,40 @@
 
   </head>
   <body>
+    <div class="juego">
+      <div class="container" id="seleccionDePersonaje">
+        <h1>SELECCION DE PERSONAJES</h1>
+        <div class="row">
+          <div class="card" id="guerrero">
+            <img class="card-img-top" src="images/seleccionPersonajes/guerrero.bmp" alt="">
+          </div>
+          <div class="card" id="mago">
+            <img class="card-img-top" src="images/seleccionPersonajes/mago.bmp" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="container" id="pantallaJuego">
+        <div class="row">
+          <img src="images/mapa/mapaSeccion1.png" id="mapaCompleto">
+        </div>
+          <canvas id="canvas" width="900" height="500"></canvas>
+      </div>
+    </div>
 
-    <div class="row">
-      <img src="images/mapa/mapaSeccion1.png" id="mapaCompleto">
-    </div>
-    <div class="container">
-        <canvas id="canvas" width="900" height="500"></canvas>
-    </div>
     <!-- <audio src="music/melodia.mp3" autoplay="true" loop="true" type="audio/mpeg"></audio> -->
+
+
+
+
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/axios.min.js"></script>
     <script src="js/easeljs-0.8.2.min.js"></script>
+    <script src="js/preloadjs-0.6.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/resources.js"></script>
     <script src="js/dibujante.js"></script>
-    <!-- <script src="js/ataque.js"></script> -->
     <script src="js/entidad.js"></script>
     <script src="js/mapa.js"></script>
     <script src="js/pared.js"></script>
