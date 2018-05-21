@@ -1,43 +1,30 @@
-/* El objeto dibujante se encarga de manipular el canvas y hacer todo lo necesario
-para poder pintar en la pantalla. Es un objeto que abstrae las complejidades del
-canvas, brindandonos una interfaz para controlarlo facilmente en el juego.
-No tenes que preocuparte por este archivo, solo saber como usar sus funciones. */
+var canvas = document.getElementById('canvas');
+var stage = new createjs.Stage(canvas);
+var sprite = "";
+// var pressing= [];
+// var KEY_LEFT= 37;
+// var KEY_RIGHT=39;
 
-var Dibujante = {
-  canvas: document.createElement('canvas'),
-  borrarAreaDeJuego: function () {
-    this.canvas.getContext('2d').clearRect(0, 0, this.canvas.width, this.canvas.height);
-  },
+function dibujarFondo(mapa){
+  var bitmap = new createjs.Bitmap(mapa);
+  stage.addChild(bitmap);
+  stage.update();
+};
 
-  inicializarCanvas: function (anchoCanvas, altoCanvas) {
-    this.canvas.width = anchoCanvas;
-    this.canvas.height = altoCanvas;
-    // document.body.insertBefore(this.canvas, document.body.childNodes[0]);//inserta delspues del primer hijo del body
-    document.getElementById('contenedor').appendChild(this.canvas);
-  },
+function dibujarPersonaje(entidad){
+  // enableInputs();
+  var spriteSheet = new createjs.SpriteSheet(entidad);
+  sprite = new createjs.Sprite(spriteSheet, "stand");
 
-  /* Dibuja una imagen a partir de su ruta, en la posicion x, y
-  con un ancho y alto dado. Es usada, por ejemplo, para pintar el mapa y los
-  carteles de game over.*/
-  dibujarImagen: function (ruta, x, y, ancho, alto) {
-    var imagen = Resources.get(ruta);
-    if (imagen != null) {
-        this.canvas.getContext('2d').drawImage(imagen, x, y, ancho, alto);
-    }
+  sprite.moving = false;
+  sprite.regX = sprite.getBounds().width / 2;
+  sprite.regY = sprite.getBounds().height / 2;
+    Juego.posicionarJugador(Juego.mapaActual);
+  // sprite.x = canvas.width / 2;
+  // sprite.y = canvas.height / 2;
 
-  },
+  stage.addChild(sprite);
 
-  /* Dibuja una entidad en el juego, esto puede ser el jugador, un enemigo, etc
-   es decir, cualquiera objeto que separ responder a los mensajes: sprite, x, y, ancho y alto*/
-  dibujarEnte: function (entidad) {
-    this.dibujarImagen(entidad.sprite, entidad.x, entidad.y, entidad.ancho, entidad.alto);
-  },
-
-  /* Dibuja un rectangulo del color pasado por paramentro en la posicion x, y
-   con ancho y alto*/
-  dibujarRectangulo: function (color, x, y, ancho, alto) {
-    var ctx = this.canvas.getContext('2d');
-    ctx.fillStyle = color;
-    ctx.fillRect(x, y, ancho, alto);
-  },
-}
+  createjs.Ticker.setFPS(60);
+  createjs.Ticker.on("tick", Entidad.onTick, this);
+};
