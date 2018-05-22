@@ -43,14 +43,14 @@ class Playable(db.Model):
 class Image(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     nombre = db.Column(db.String(50))
-    blob = db.Column(db.BLOB)
+    url = db.Column(db.String(50))
 
     @property
     def serialize(self):
         return {
             'id': self.id,
             'nombre': self.nombre,
-            'blob': self.blob
+            'url': self.url
         }
 
 
