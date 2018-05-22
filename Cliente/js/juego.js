@@ -1,15 +1,3 @@
-var servidor = 'http://127.0.0.1:5000';
-
-function peticionGet() {
-
- axios.get(servidor + '/playable/all/').then(function(response) {
-   console.log(response.data);
-    }).catch(function(error) {
-   console.log(error);
- });
- }
- peticionGet();
-
 var Juego = {
   //configuracion de tamaño de mapa
 
@@ -155,6 +143,8 @@ Juego.iniciarRecursos = function() {
 };
 
 $(document).ready(function(){
+    players();
+
   if (Juego.seSeleccionoUnPersonaje()) {
     Juego.iniciarRecursos();
     Juego.enableInputs();
@@ -168,7 +158,7 @@ $(document).ready(function(){
 });
 
 Juego.seSeleccionoUnPersonaje = function(){
-  return true;
+  return false;
 };
 
 //camptura las teclas
