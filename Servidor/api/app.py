@@ -11,6 +11,7 @@ db = SQLAlchemy(app)
 
 from core.src.Controllers.EntidadController import *
 from core.src.Controllers.EnemyController import *
+from core.src.Controllers.ImageController import *
 
 if __name__ == '__main__':
     app.run()
