@@ -1,4 +1,5 @@
-from app import db
+from api.app import db
+from sqlalchemy import Integer, String, BLOB
 
 
 class Playable(db.Model):
@@ -36,6 +37,20 @@ class Playable(db.Model):
             'ataque_id': self.ataque_id,
             'experiencia': self.experiencia,
             'pacto': self.pacto
+        }
+
+
+class Image(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    nombre = db.Column(db.String(50))
+    blob = db.Column(db.BLOB)
+
+    @property
+    def serialize(self):
+        return {
+            'id': self.id,
+            'nombre': self.nombre,
+            'blob': self.blob
         }
 
 
