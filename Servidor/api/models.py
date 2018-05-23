@@ -1,4 +1,4 @@
-from flask_user import login_required, UserManager, UserMixin, SQLAlchemyAdapter
+from flask_user import UserMixin, SQLAlchemyAdapter, UserManager
 
 from api.app import db, app
 
@@ -12,6 +12,7 @@ class User(db.Model, UserMixin):
 
 db_adapter = SQLAlchemyAdapter(db, User)
 user_manager = UserManager(db_adapter, app)
+
 
 class Playable(db.Model):
     id = db.Column(db.Integer, primary_key=True)
