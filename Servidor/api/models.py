@@ -1,6 +1,17 @@
-from api.app import db
-from sqlalchemy import Integer, String, BLOB
+from flask_user import login_required, UserManager, UserMixin, SQLAlchemyAdapter
 
+from api.app import db, app
+
+
+class User(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(50))
+    password = db.Column(db.String(255))
+    active = db.Column(db.Boolean())
+
+
+db_adapter = SQLAlchemyAdapter(db, User)
+user_manager = UserManager(db_adapter, app)
 
 class Playable(db.Model):
     id = db.Column(db.Integer, primary_key=True)
