@@ -2,17 +2,24 @@ from flask_user import UserMixin, SQLAlchemyAdapter, UserManager
 
 from api.app import db, app
 
-
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(50))
     password = db.Column(db.String(255))
     active = db.Column(db.Boolean())
 
+    @property
+    def serialize(self):
+        return {
+            'id': self.id,
+            'username': self.username,
+            'password': self.url,
+            'active': self.active
+        }
+
 
 db_adapter = SQLAlchemyAdapter(db, User)
 user_manager = UserManager(db_adapter, app)
-
 
 class Playable(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -50,6 +57,16 @@ class Playable(db.Model):
             'experiencia': self.experiencia,
             'pacto': self.pacto
         }
+
+
+class Attribute(object):
+    def __init__(self, ps, mana, fuerza, agilidad, vitalidad, energia):
+        self.ps = ps
+        self.mana = mana
+        self.fuerza = fuerza
+        self.agilidad = agilidad
+        self.vitalidad = vitalidad
+        self.energia = energia
 
 
 class Image(db.Model):
@@ -102,6 +119,8 @@ class Enemy(db.Model):
             'experiencia': self.experiencia,
             'raza': self.raza
         }
+
+
 
 
 """

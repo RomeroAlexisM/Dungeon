@@ -10,3 +10,6 @@ class PlayableService():
 
     def getAll(self):
         return playablesrepository.getAll()
+
+    def get_attributes(self, playable_id):
+        return playablesrepository.get_attributes(playable_id)

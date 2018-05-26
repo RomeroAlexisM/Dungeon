@@ -1,5 +1,5 @@
 import sys
-from flask import jsonify
+from flask import jsonify, request
 from api.app import app
 from Servidor.core.src.Services.PlayableService import *
 sys.path.insert(0, '/home/stalker/PycharmProjects/Dungeon')
@@ -17,4 +17,10 @@ def first():
 def playables():
     playables = playableService.getAll()
     return jsonify(playables_list=[i.serialize for i in playables])
+
+
+@app.route('/playable/attributes/<playable_id>', methods=['GET'])
+def attributes(playable_id):
+    attributes = playableService.get_attributes(playable_id)
+    return json.dumps(attributes.__dict__)
 

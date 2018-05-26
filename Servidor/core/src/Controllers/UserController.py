@@ -2,7 +2,6 @@
 import sys
 from flask import jsonify
 from api.app import app
-from Servidor.core.src.Services.EnemyService import *
 sys.path.insert(0, '/home/stalker/PycharmProjects/Dungeon')
 from flask_user import login_required
 
