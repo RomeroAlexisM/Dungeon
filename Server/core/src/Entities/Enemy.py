@@ -3,7 +3,7 @@ from Servidor.core.src.Entidades.Ente import Ente
 from Servidor.core.src.Entidades.globals import MODIFICADOR_DANIO_ESPECIAL, MODIFICADOR_DANIO_BASICO
 
 
-class Enemigo(Ente):
+class Enemy(Entity):
 
     def atacar(self, oponente, ataque):
         if ataque.especial:

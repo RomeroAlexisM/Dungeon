@@ -1,4 +1,4 @@
-from Servidor.core.src.Persistencia.ataques import *
+from Servidor.core.src.Persistence.ataques import *
 from Servidor.core.src.Entidades.Ente import Ente
 
 guerrero = Ente(identificador='Guerrero',
