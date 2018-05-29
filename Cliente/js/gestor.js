@@ -1,6 +1,6 @@
  var servidor = 'http://127.0.0.1:5000';
  //muestra todos los personajes para seleccionar
-function players() {
+function player_selection() {
 
  axios.get(servidor + '/images/character-selection/').then(function(response) {
    var personajes = response.data.character_list
@@ -21,10 +21,12 @@ function players() {
      personaje.click(function() {
       var id = $(this).attr('id');
       console.log(id);
+      return true;
      });
    }
  }).catch(function(error) {
  console.log(error);
+ return false;
  });
  }
 

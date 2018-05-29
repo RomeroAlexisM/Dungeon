@@ -143,9 +143,9 @@ Juego.iniciarRecursos = function() {
 };
 
 $(document).ready(function(){
-    players();
-
-  if (Juego.seSeleccionoUnPersonaje()) {
+  if (player_selection()) {
+    $('#seleccionDePersonaje').fadeOut(1000);
+    console.log("se");
     Juego.iniciarRecursos();
     Juego.enableInputs();
     Juego.mapas.forEach(function(mapa){
@@ -156,10 +156,6 @@ $(document).ready(function(){
     });
   }
 });
-
-Juego.seSeleccionoUnPersonaje = function(){
-  return false;
-};
 
 //camptura las teclas
 Juego.enableInputs = function(){
