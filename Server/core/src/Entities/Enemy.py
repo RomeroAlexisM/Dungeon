@@ -1,22 +1,23 @@
 import random
-from Servidor.core.src.Entidades.Ente import Ente
-from Servidor.core.src.Entidades.globals import MODIFICADOR_DANIO_ESPECIAL, MODIFICADOR_DANIO_BASICO
+from Server.core.src.Entities.Entity import Entity
+from Server.core.src.Entities.globals import SPECIAL_DADMAGE_MODIFIER, BASE_DADMAGE_MODIFIER
 
 
 class Enemy(Entity):
 
-    def atacar(self, oponente, ataque):
-        if ataque.especial:
-            oponente.ps -= self.calcular_multiplicador(ataque, MODIFICADOR_DANIO_ESPECIAL)
-            self.perder_mana(ataque.costomana)
+    def attacks(self, opponent, attack):
+        if attack.special:
+            opponent.hp -= self.calculate_multiplier(attack, SPECIAL_DADMAGE_MODIFIER)
+            self.lose_mana(attack.mana_cost)
 
         else:
-            oponente.ps -= self.calcular_multiplicador(ataque, MODIFICADOR_DANIO_BASICO)
+            opponent.hp -= self.calculate_multiplier(attack, BASE_DADMAGE_MODIFIER)
 
-    def elegir_ataque(self):
-        ataquealeatorio = random.choice(self.ataques)
+    def choose_attack(self):
+        random_attack = random.choice(self.attack_list)
 
-        while not self.suficiente_mana(ataquealeatorio.costomana):
-            ataquealeatorio = random.choice(self.ataques)
+        while not self.enough_mana(random_attack.mana_cost):
+            random_attack = random.choice(self.attacks)
 
-        return ataquealeatorio
+        return random_attack
+

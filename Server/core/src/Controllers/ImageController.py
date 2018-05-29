@@ -1,7 +1,7 @@
 import sys
 from flask import jsonify
 from api.app import app
-from Servidor.core.src.Services.ImageService import *
+from Server.core.src.Services.ImageService import *
 sys.path.insert(0, '/home/stalker/PycharmProjects/Dungeon')
 
 imageService = ImageService()

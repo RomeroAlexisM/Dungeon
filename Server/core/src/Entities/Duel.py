@@ -11,32 +11,32 @@ class Duel:
 
     def player_attacks_first(self):
         if self.player.agility >= self.opponent.agility:
-            self.player.attacks = True
+            self.player.is_attacking = True
 
         else:
-            self.opponent.attacks = True
+            self.opponent.is_attacking = True
 
     def turn(self):
-        if self.player.attacks:
-            self.player.attack(self.opponent, self.player.choose_attack())
+        if self.player.is_attacking:
+            self.player.attacks(self.opponent, self.player.choose_attack())
 
             if self.opponent.is_alive():
-                self.player.attacks = False
-                self.opponent.attacks = True
+                self.player.is_attacking = False
+                self.opponent.is_attacking = True
 
             else:
-                self.player.attacks = False
+                self.player.is_attacking = False
                 self.end_duel()
 
         else:
-            self.opponent.attack(self.player, self.opponent.choose_attack())
+            self.opponent.attacks(self.player, self.opponent.choose_attack())
 
             if self.player.is_alive():
-                self.opponent.attacks = False
-                self.player.attacks = True
+                self.opponent.is_attacking = False
+                self.player.is_attacking = True
 
             else:
-                self.opponent.attacks = False
+                self.opponent = False
                 self.end_duel()
 
     def end_duel(self):

@@ -1,26 +1,32 @@
-from Servidor.core.src.Persistence.ataques import *
-from Servidor.core.src.Entidades.Ente import Ente
+from Server.core.src.Entities.Entity import Entity
+from core.src.Persistance.attacks import *
 
-guerrero = Ente(identificador='Guerrero',
-                   nivel=1,
-                   ps=20,
-                   mana=15,
-                   fuerza=30,
-                   agilidad=10,
-                   vitalidad=20,
-                   energia=10,
-                   exp=0,
-                   items=[],
-                   ataques=(golpear, ensartada))
+guerrero = Entity(name='Guerrero',
+                  level=1,
+                  hp=20,
+                  mana=15,
+                  strength=30,
+                  agility=10,
+                  vitality=20,
+                  energy=10,
+                  physical_defense=0,
+                  magical_defense=0,
+                  status='',
+                  exp=0,
+                  items=[],
+                  attack_list=(golpear, ensartada))
 
-mago = Ente(identificador='Mago',
-               nivel=1,
-               ps=20,
-               mana=30,
-               fuerza=15,
-               agilidad=10,
-               vitalidad=20,
-               energia=30,
-               exp=0,
-               items=[],
-               ataques=(fireball, lightingStorm))
+mago = Entity(name='Mago',
+              level=1,
+              hp=20,
+              mana=30,
+              strength=15,
+              agility=10,
+              vitality=20,
+              energy=30,
+              physical_defense=0,
+              magical_defense=0,
+              status='',
+              exp=0,
+              items=[],
+              attack_list=(fireball, lightingStorm))

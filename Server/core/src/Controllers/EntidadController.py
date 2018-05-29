@@ -1,7 +1,7 @@
 import sys
 from flask import jsonify, request, json
 from api.app import app
-from Servidor.core.src.Services.Entity import *
+from Server.core.src.Services.Entity import *
 sys.path.insert(0, '/home/stalker/PycharmProjects/Dungeon')
 
 entity_service = EntityService()

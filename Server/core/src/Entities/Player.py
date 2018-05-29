@@ -1,65 +1,65 @@
-from Servidor.core.src.Entidades.Ente import Ente
-from Servidor.core.globales import niveles, PUNTOS_NUEVO_NIVEL, UNO, DIEZ, CERO
+from Server.core.src.Entities.Entity import Entity
+from Server.core.src.Entities.globals import levels, NEW_LEVEL_POINTS, ONE, TEN, ZERO
 
 
-class Jugador(Ente):
+class Player(Entity):
 
-    def elegir_ataque(self):
-        ataque = self.ataques[1]
-        return ataque  # Definir en el futuro como se elige
+    def choose_attack(self):
+        attack = self.attack_list[1]
+        return attack  # Definir en el futuro como se elige
 
-    def obtener_experiencia(self, enemigo):
-        diferencianivel = enemigo.nivel - self.nivel
-        expenemigo = enemigo.exp
+    def gain_exp(self, enemy):
+        level_difference = enemy.level - self.level
+        enemy_exp = enemy.exp
 
-        expobtenida = self.calcular_experiencia(diferencianivel, expenemigo, enemigo.nivel)
+        exp_obtained = self.calculate_exp(level_difference, enemy_exp, enemy.level)
 
-        self.sube_nivel(expobtenida)
+        self.level_up(exp_obtained)
 
-    def calcular_experiencia(self, diferencianivel, expbase, nivelenemigo):
-        if diferencianivel == CERO:
-            return int(expbase * .8)
+    def calculate_exp(self, level_difference, base_exp, enemy_level):
+        if level_difference == ZERO:
+            return int(base_exp * .8)
 
-        elif diferencianivel < 0 or diferencianivel > DIEZ:
-            return int(expbase * 0.15)
+        elif level_difference < 0 or level_difference > TEN:
+            return int(base_exp * 0.15)
 
-        elif CERO < diferencianivel <= DIEZ:
-            porcentaje = self.nivel / nivelenemigo
+        elif ZERO < level_difference <= TEN:
+            percentage = self.level / enemy_level
 
-            return int(expbase * porcentaje)
+            return int(base_exp * percentage)
 
-    def sube_nivel(self, expobtenida):
-        expactual = self.exp
-        nivelactual = self.nivel
+    def level_up(self, exp_obtained):
+        actual_exp = self.exp
+        actual_level = self.level
 
-        #  Si la experiencia conseguida no supera a la experiencia máxima del nivel, no sube
+        #  Si la experiencia conseguida no supera a la experiencia máxima del level, no sube
 
-        if niveles[nivelactual] > (expactual + expobtenida):
-            self.exp += expobtenida
+        if levels[actual_level] > (actual_exp + exp_obtained):
+            self.exp += exp_obtained
             print(self.exp)
-            print(expactual)
-            print(expobtenida)
+            print(actual_exp)
+            print(exp_obtained)
 
-        #  recorro la lista desde el nivel actual hasta el final,
-        #  si la experiencia total es mayor significa que pasa de nivel,
-        #  se sube nivel automáticamente cuando detecta que supera el valor necesario
-        #  para pasar de nivel
+        #  recorro la lista desde el level actual hasta el final,
+        #  si la experiencia total es mayor significa que pasa de level,
+        #  se sube level automáticamente cuando detecta que supera el valor necesario
+        #  para pasar de level
         else:
-            for item in [key for key in niveles if key in range(self.nivel, len(niveles))]:
-                if (expactual + expobtenida) >= niveles[item]:
-                    print(expactual + expobtenida)
-                    self.nuevo_nivel()
-                    print('subio al nivel:', self.nivel)
-                    print('VIT:', self.vitalidad, 'STR: ', self.fuerza, 'AGI: ', self.agilidad, 'ENE: ', self.energia)
+            for item in [key for key in levels if key in range(self.level, len(levels))]:
+                if (actual_exp + exp_obtained) >= levels[item]:
+                    print(actual_exp + exp_obtained)
+                    self.new_level()
+                    print('subio al level:', self.level)
+                    print('VIT:', self.vitality, 'STR: ', self.strength, 'AGI: ', self.agility, 'ENE: ', self.energy)
 
-            self.exp += expobtenida
-            print('expactual', self.exp)
+            self.exp += exp_obtained
+            print('actual_exp', self.exp)
 
-        self.exp += expobtenida
+        self.exp += exp_obtained
 
-    def nuevo_nivel(self):
-        self.nivel += UNO
-        self.fuerza += PUNTOS_NUEVO_NIVEL
-        self.agilidad += PUNTOS_NUEVO_NIVEL
-        self.vitalidad += PUNTOS_NUEVO_NIVEL
-        self.energia += PUNTOS_NUEVO_NIVEL
+    def new_level(self):
+        self.level += ONE
+        self.strength += NEW_LEVEL_POINTS
+        self.agility += NEW_LEVEL_POINTS
+        self.vitality += NEW_LEVEL_POINTS
+        self.energy += NEW_LEVEL_POINTS
