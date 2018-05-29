@@ -2,15 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f73c74f8-e749-4ec5-9240-9f28caef067f" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Server/core/src/Entities/Entity.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/core/src/Persistance/enemies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Dungeon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Dungeon.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/api/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/api/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/api/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/api/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/api/db.db" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/api/db.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/api/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/core/src/Controllers/EntidadController.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Controllers/EntidadController.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/core/src/Controllers/UserController.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Controllers/UserController.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/core/src/Persistance/PlayableRepository.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Persistance/PlayableRepository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/core/src/Services/PlayableService.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/core/src/Services/PlayableService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/core/src/Controllers/EntidadController.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server/core/src/Controllers/EntidadController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/core/src/Controllers/ImageController.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server/core/src/Controllers/ImageController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/core/src/Entities/Attack.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server/core/src/Entities/Attack.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/core/src/Entities/Enemy.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server/core/src/Entities/Enemy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/core/src/Entities/Ente.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/core/src/Entities/Player.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server/core/src/Entities/Player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/core/src/Entities/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server/core/src/Entities/globals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/core/src/Persistance/ataques.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server/core/src/Persistance/attacks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/core/src/Persistance/enemigos.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/core/src/Persistance/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server/core/src/Persistance/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/core/src/Persistance/jugables.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server/core/src/Persistance/jugables.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,89 +27,94 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Servidor/api/models.py">
+      <file leaf-file-name="enemies.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/core/src/Persistance/enemies.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="62" column="38" lean-forward="true" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Servidor/api/app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+            <state relative-caret-position="-240">
+              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
               <folding>
-                <element signature="e#0#23#0" expanded="true" />
+                <element signature="e#0#46#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Servidor/api/config.py">
+      <file leaf-file-name="jugables.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/core/src/Persistance/jugables.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#49#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/core/src/Entities/Player.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="960">
+              <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageRepository.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/core/src/Persistance/ImageRepository.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <caret line="7" column="20" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="items.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/core/src/Persistance/items.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="attacks.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/core/src/Persistance/attacks.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="960">
+              <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
               <folding>
-                <element signature="e#0#36#0" expanded="true" />
+                <element signature="e#0#50#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayableService.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Servidor/core/src/Services/PlayableService.py">
+      <file leaf-file-name="Enemy.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Server/core/src/Entities/Enemy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EntidadController.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Servidor/core/src/Controllers/EntidadController.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+            <state relative-caret-position="270">
+              <caret line="18" column="60" lean-forward="true" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayableRepository.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Servidor/core/src/Persistance/PlayableRepository.py">
+      <file leaf-file-name="Entity.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/core/src/Entities/Entity.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="540">
+              <caret line="36" column="8" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Servidor/core/src/Controllers/UserController.py">
+      <file leaf-file-name="globals.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/core/src/Entities/globals.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="e#24#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageController.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Servidor/core/src/Controllers/ImageController.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -120,10 +131,35 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Entidad</find>
+      <find>VITALIDAD</find>
+      <find>VALOR_REGENERACION_VIDA</find>
+      <find>vitalidad</find>
+      <find>atacar</find>
+      <find>PUNTOS_NUEVO_NIVEL</find>
+      <find>MODIFICADOR_DANIO_ESPECIAL</find>
+      <find>Persistencia</find>
+      <find>multiplicador</find>
+      <find>ataquealeatorio</find>
+      <find>ps</find>
+      <find>energia</find>
+      <find>ataques</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>Ente</replace>
+      <replace>VITALITY</replace>
+      <replace>HP_REGENERATION_VALUE</replace>
+      <replace>vitality</replace>
+      <replace>attack</replace>
+      <replace>gain_exp</replace>
+      <replace>NEW_LEVEL_POINTS</replace>
+      <replace>SPECIAL_DADMAGE_MODIFIER</replace>
+      <replace>Persitance</replace>
+      <replace>multiplier</replace>
+      <replace>random_attack</replace>
+      <replace>hp</replace>
+      <replace>energy</replace>
+      <replace>attacks</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/Servidor/clases</dir>
@@ -135,22 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Servidor/SubClases/Ente/enemigos.py" />
-        <option value="$PROJECT_DIR$/Servidor/SubClases/Item/ClasesItem/Equipable.py" />
-        <option value="$PROJECT_DIR$/Servidor/items.py" />
-        <option value="$PROJECT_DIR$/Servidor/ClasesPadre/Item.py" />
-        <option value="$PROJECT_DIR$/Servidor/ClasesPadre/Ente.py" />
-        <option value="$PROJECT_DIR$/Servidor/core/src/Servicios/AnilloService.py" />
-        <option value="$PROJECT_DIR$/Servidor/core/src/Servicios/ArmaService.py" />
-        <option value="$PROJECT_DIR$/Servidor/core/src/Servicios/ArmaduraService.py" />
-        <option value="$PROJECT_DIR$/Servidor/core/src/Servicios/AtaqueService.py" />
-        <option value="$PROJECT_DIR$/Servidor/core/src/Servicios/ConsumibleService.py" />
-        <option value="$PROJECT_DIR$/Servidor/core/src/Entidades/DueloService.py" />
-        <option value="$PROJECT_DIR$/Servidor/core/src/Entidades/EnemigoService.py" />
-        <option value="$PROJECT_DIR$/Servidor/core/src/Servicios/EquipableService.py" />
-        <option value="$PROJECT_DIR$/Servidor/core/src/Servicios/ItemService.py" />
-        <option value="$PROJECT_DIR$/Servidor/core/src/Entidades/JoyaService.py" />
-        <option value="$PROJECT_DIR$/Servidor/core/src/Servicios/JugadorService.py" />
         <option value="$PROJECT_DIR$/Servidor/core/src/Servicios/PendanteService.py" />
         <option value="$PROJECT_DIR$/Servidor/core/src/Entidades/PocionService.py" />
         <option value="$PROJECT_DIR$/Servidor/api/bdsimulada/ataques.py" />
@@ -162,7 +182,6 @@
         <option value="$PROJECT_DIR$/Servidor/api/bookshelf/__init__.py" />
         <option value="$PROJECT_DIR$/Servidor/api/run.py" />
         <option value="$PROJECT_DIR$/Servidor/app.py" />
-        <option value="$PROJECT_DIR$/Servidor/core/src/Entidades/Ente.py" />
         <option value="$PROJECT_DIR$/Servidor/core/src/Entidades/Enemigo.py" />
         <option value="$PROJECT_DIR$/Servidor/api/db.py" />
         <option value="$PROJECT_DIR$/Servidor/core/src/Controladores/EntidadController.py" />
@@ -179,13 +198,30 @@
         <option value="$PROJECT_DIR$/Servidor/core/src/Services/ImageService.py" />
         <option value="$PROJECT_DIR$/Servidor/core/src/Controllers/ImageController.py" />
         <option value="$PROJECT_DIR$/Servidor/core/src/Controllers/UserController.py" />
-        <option value="$PROJECT_DIR$/Servidor/core/src/Services/PlayableService.py" />
         <option value="$PROJECT_DIR$/Servidor/api/config.py" />
-        <option value="$PROJECT_DIR$/Servidor/api/app.py" />
         <option value="$PROJECT_DIR$/Servidor/api/__init__.py" />
-        <option value="$PROJECT_DIR$/Servidor/core/src/Controllers/EntidadController.py" />
-        <option value="$PROJECT_DIR$/Servidor/api/models.py" />
         <option value="$PROJECT_DIR$/Servidor/core/src/Persistance/PlayableRepository.py" />
+        <option value="$PROJECT_DIR$/Servidor/api/models.py" />
+        <option value="$PROJECT_DIR$/Servidor/api/app.py" />
+        <option value="$PROJECT_DIR$/Servidor/core/src/Services/PlayableService.py" />
+        <option value="$PROJECT_DIR$/Servidor/core/src/Persistance/EntityRepository.py" />
+        <option value="$PROJECT_DIR$/Servidor/core/src/Controllers/EntidadController.py" />
+        <option value="$PROJECT_DIR$/Servidor/core/src/Persistance/jugables.py" />
+        <option value="$PROJECT_DIR$/Servidor/core/src/Entidades/Duel.py" />
+        <option value="$PROJECT_DIR$/Servidor/core/src/Entidades/Attack.py" />
+        <option value="$PROJECT_DIR$/Servidor/core/src/Entidades/Enemy.py" />
+        <option value="$PROJECT_DIR$/Servidor/core/src/Entidades/Ente.py" />
+        <option value="$PROJECT_DIR$/Servidor/core/src/Entities/Ente.py" />
+        <option value="$PROJECT_DIR$/Server/core/src/Entities/Ente.py" />
+        <option value="$PROJECT_DIR$/Server/core/src/Entities/globals.py" />
+        <option value="$PROJECT_DIR$/Server/core/src/Entities/Entity.py" />
+        <option value="$PROJECT_DIR$/Server/core/src/Entities/Attack.py" />
+        <option value="$PROJECT_DIR$/Server/core/src/Persistance/enemigos.py" />
+        <option value="$PROJECT_DIR$/Server/core/src/Entities/Player.py" />
+        <option value="$PROJECT_DIR$/Server/core/src/Persistance/attacks.py" />
+        <option value="$PROJECT_DIR$/Server/core/src/Persistance/jugables.py" />
+        <option value="$PROJECT_DIR$/Server/core/src/Persistance/enemies.py" />
+        <option value="$PROJECT_DIR$/Server/core/src/Entities/Enemy.py" />
       </list>
     </option>
   </component>
@@ -203,7 +239,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -214,31 +249,31 @@
             <path>
               <item name="Dungeon" type="b2602c69:ProjectViewProjectNode" />
               <item name="Dungeon" type="462c0819:PsiDirectoryNode" />
-              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
+              <item name="Server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Dungeon" type="b2602c69:ProjectViewProjectNode" />
               <item name="Dungeon" type="462c0819:PsiDirectoryNode" />
-              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
+              <item name="Server" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Dungeon" type="b2602c69:ProjectViewProjectNode" />
               <item name="Dungeon" type="462c0819:PsiDirectoryNode" />
-              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
+              <item name="Server" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Dungeon" type="b2602c69:ProjectViewProjectNode" />
               <item name="Dungeon" type="462c0819:PsiDirectoryNode" />
-              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
+              <item name="Server" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Dungeon" type="b2602c69:ProjectViewProjectNode" />
               <item name="Dungeon" type="462c0819:PsiDirectoryNode" />
-              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
+              <item name="Server" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Controllers" type="462c0819:PsiDirectoryNode" />
@@ -246,31 +281,24 @@
             <path>
               <item name="Dungeon" type="b2602c69:ProjectViewProjectNode" />
               <item name="Dungeon" type="462c0819:PsiDirectoryNode" />
-              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
+              <item name="Server" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Entidades" type="462c0819:PsiDirectoryNode" />
+              <item name="Entities" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Dungeon" type="b2602c69:ProjectViewProjectNode" />
               <item name="Dungeon" type="462c0819:PsiDirectoryNode" />
-              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
+              <item name="Server" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Persistance" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Dungeon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Dungeon" type="462c0819:PsiDirectoryNode" />
-              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -312,7 +340,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Servidor/core/src/Entidades/globales.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Servidor/core/src/Entidades/globals.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -403,23 +431,23 @@
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20983858" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20983858" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3298193" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27259037" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.27259037" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.5007949" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39759037" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -437,148 +465,23 @@
           <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="22" />
+      <option name="time" value="23" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Servidor/index.py" />
-    <entry file="file://$PROJECT_DIR$/Cliente/js/juego.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4538" />
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="1067" selection-start-line="1067" selection-end-line="1067" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cliente/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/personajes.py" />
-    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Persistance/jugables.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Entidades/Equipable.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Persistance/enemigos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="57" column="6" selection-start-line="57" selection-start-column="6" selection-end-line="57" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Entidades/Item.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Persistance/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/api/bdsimulada/ataques.py" />
-    <entry file="file://$PROJECT_DIR$/Servidor/api/bookshelf/main/controllers.py" />
-    <entry file="file://$PROJECT_DIR$/Servidor/api/bookshelf/admin/controllers.py" />
-    <entry file="file://$PROJECT_DIR$/Servidor/api/bookshelf/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/Servidor/api/run.py" />
-    <entry file="file://$PROJECT_DIR$/Servidor/api/README.md" />
     <entry file="file://$PROJECT_DIR$/venv/bin/activate" />
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/SQLAlchemy-1.2.7-py3.5.egg-info/installed-files.txt" />
-    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Entidades/globales.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Entidades/Jugador.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-243">
-          <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Entidades/Enemigo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/local/lib/python2.7/site-packages/flask/app.py" />
-    <entry file="file://$PROJECT_DIR$/Servidor/core/src/__init__.py">
+    <entry file="file://$PROJECT_DIR$/Server/core/src/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Entidades/Ente.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Servidor/api/views.py" />
-    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Persistance/ataques.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Entidades/Ataque.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/lib/python2.7/socket.py" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/flask_sqlalchemy/__init__.py" />
     <entry file="file://$PROJECT_DIR$/Servidor/core/src/Services/EnemyService.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="35" selection-start-column="35" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Persistance/ImageRepository.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -591,13 +494,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/local/lib/python2.7/site-packages/sqlalchemy/sql/schema.py" />
     <entry file="file://$PROJECT_DIR$/venv/local/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Controllers/EnemyController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="4" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -605,29 +501,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Services/ImageService.py">
+    <entry file="file://$PROJECT_DIR$/Server/core/src/Services/ImageService.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Controllers/ImageController.py">
+    <entry file="file://$PROJECT_DIR$/Server/core/src/Controllers/ImageController.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Controllers/UserController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#24#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -639,9 +525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/api/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
@@ -649,16 +532,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Entidades/Duelo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Server/api/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/api/config.py">
+    <entry file="file://$PROJECT_DIR$/Server/api/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="105">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
@@ -666,44 +545,205 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/api/app.py">
+    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Controllers/EnemyController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Services/PlayableService.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Controllers/EntidadController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+        <state relative-caret-position="90">
+          <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Persistance/PlayableRepository.py">
+    <entry file="file://$PROJECT_DIR$/Server/api/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="1065">
+          <caret line="72" column="28" lean-forward="true" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Servidor/api/models.py">
+    <entry file="file://$PROJECT_DIR$/Server/core/src/Controllers/UserController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="62" column="38" lean-forward="true" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#24#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/core/src/Controllers/EntidadController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/core/src/Services/Entity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Entidades/Anillo.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Entidades/Arma.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Entidades/Armadura.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Entidades/Consumible.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Entidades/Joya.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Entidades/Pendante.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Entidades/Pocion.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Entidades/Equipable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/core/src/Entities/Item.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Persistance/brazo.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Persistance/cabeza.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Persistance/dosmanos.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/api/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/core/src/Persistance/EntityRepository.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/core/src/Persistance/ImageRepository.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Persistance/pantalon.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Persistance/pociones.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Servidor/core/src/Persistance/unamano.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/core/src/Entities/Duel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="17" lean-forward="true" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/core/src/Entities/globals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/core/src/Entities/Entity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="8" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/core/src/Entities/Attack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/core/src/Persistance/jugables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/core/src/Entities/Player.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/core/src/Persistance/enemies.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-240">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/core/src/Persistance/items.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/core/src/Persistance/attacks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/core/src/Entities/Enemy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="60" lean-forward="true" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
