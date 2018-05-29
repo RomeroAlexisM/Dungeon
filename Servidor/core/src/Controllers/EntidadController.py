@@ -1,26 +1,26 @@
 import sys
-from flask import jsonify, request
+from flask import jsonify, request, json
 from api.app import app
 from Servidor.core.src.Services.PlayableService import *
 sys.path.insert(0, '/home/stalker/PycharmProjects/Dungeon')
 
-playableService = PlayableService()
+entity_service = EntityService()
 
 
 @app.route('/playable/first/', methods=['GET'])
-def first():
-    firstplayable = playableService.getFirst()
-    return '<h1>El primer ente es: '+firstplayable.nombre+'</h1>'
+def get_first():
+    first_entity = entity_service.get_first()
+    return '<h1>El primer ente es: '+first_entity.nombre+'</h1>'
 
 
 @app.route('/playable/all/', methods=['GET'])
-def playables():
-    playables = playableService.getAll()
-    return jsonify(playables_list=[i.serialize for i in playables])
+def get_entities():
+    entities = entity_service.get_all()
+    return jsonify(playables_list=[i.serialize for i in entities])
 
 
 @app.route('/playable/attributes/<playable_id>', methods=['GET'])
-def attributes(playable_id):
-    attributes = playableService.get_attributes(playable_id)
+def get_attributes(entity_id):
+    attributes = entity_service.get_attributes(entity_id)
     return json.dumps(attributes.__dict__)
 

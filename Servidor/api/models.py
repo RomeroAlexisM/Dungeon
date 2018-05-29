@@ -1,6 +1,6 @@
 from flask_user import UserMixin, SQLAlchemyAdapter, UserManager
-
 from api.app import db, app
+
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
@@ -21,154 +21,67 @@ class User(db.Model, UserMixin):
 db_adapter = SQLAlchemyAdapter(db, User)
 user_manager = UserManager(db_adapter, app)
 
-class Playable(db.Model):
+
+class Entity(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    nombre = db.Column(db.String(50))
-    nivel = db.Column(db.Integer)
-    ps = db.Column(db.Integer)
+    name = db.Column(db.String(50))
+    level = db.Column(db.Integer)
+    hp = db.Column(db.Integer)
     mana = db.Column(db.Integer)
-    fuerza = db.Column(db.Integer)
-    agilidad = db.Column(db.Integer)
-    vitalidad = db.Column(db.Integer)
-    energia = db.Column(db.Integer)
-    defensafisica = db.Column(db.Integer)
-    defensamagica = db.Column(db.Integer)
-    estado = db.Column(db.String(50))
-    ataque_id = db.Column(db.Integer)
-    experiencia = db.Column(db.Integer)
-    pacto = db.Column(db.String(60))
+    strength = db.Column(db.Integer)
+    agility = db.Column(db.Integer)
+    vitality = db.Column(db.Integer)
+    energy = db.Column(db.Integer)
+    physical_def = db.Column(db.Integer)
+    magical_def = db.Column(db.Integer)
+    status = db.Column(db.String(50))
+    attacks_id = db.Column(db.Integer)
+    exp = db.Column(db.Integer)
+    covenant = db.Column(db.String(60))
+    type = db.Column(db.String(60))
 
     @property
     def serialize(self):
         return {
             'id': self.id,
-            'nombre': self.nombre,
-            'nivel': self.nivel,
-            'ps': self.ps,
+            'name': self.name,
+            'level': self.level,
+            'hp': self.hp,
             'mana': self.mana,
-            'fuerza': self.fuerza,
-            'agilidad': self.agilidad,
-            'vialidad': self.vitalidad,
-            'energia': self.energia,
-            'defensafisica': self.defensafisica,
-            'defensamagica': self.defensamagica,
-            'estado': self.estado,
-            'ataque_id': self.ataque_id,
-            'experiencia': self.experiencia,
-            'pacto': self.pacto
+            'strength': self.strength,
+            'agility': self.agility,
+            'vitality': self.vitality,
+            'energy': self.energy,
+            'physical_def': self.physical_def,
+            'magical_def': self.magic_def,
+            'status': self.status,          #ENVENENADO, INCENDIADO, SANO, etc
+            'attacks_id': self.attacks_id,
+            'exp': self.exp,
+            'race': self.race,              #  HUMANO, BESTIA, ETÉREO (en inglés)
+            'covenant': self.covenant,      #PACTOS PARA QUEST (FUTURO)
+            'type': self.type               #  Acá va a ser si es PLAYABLE, ENEMY o NPC
         }
 
 
 class Attribute(object):
-    def __init__(self, ps, mana, fuerza, agilidad, vitalidad, energia):
-        self.ps = ps
+    def __init__(self, hp, mana, strength, agility, vitality, energy):
+        self.hp = hp
         self.mana = mana
-        self.fuerza = fuerza
-        self.agilidad = agilidad
-        self.vitalidad = vitalidad
-        self.energia = energia
+        self.strength = strength
+        self.agility = agility
+        self.vitality = vitality
+        self.energy = energy
 
 
 class Image(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    nombre = db.Column(db.String(50))
+    name = db.Column(db.String(50))
     url = db.Column(db.String(50))
 
     @property
     def serialize(self):
         return {
             'id': self.id,
-            'nombre': self.nombre,
+            'name': self.name,
             'url': self.url
         }
-
-
-class Enemy(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    nombre = db.Column(db.String(50))
-    nivel = db.Column(db.Integer)
-    ps = db.Column(db.Integer)
-    mana = db.Column(db.Integer)
-    fuerza = db.Column(db.Integer)
-    agilidad = db.Column(db.Integer)
-    vitalidad = db.Column(db.Integer)
-    energia = db.Column(db.Integer)
-    defensafisica = db.Column(db.Integer)
-    defensamagica = db.Column(db.Integer)
-    estado = db.Column(db.String(50))
-    ataque_id = db.Column(db.Integer)
-    experiencia = db.Column(db.Integer)
-    raza = db.Column(db.String(60))
-
-    @property
-    def serialize(self):
-        return {
-            'id': self.id,
-            'nombre': self.nombre,
-            'nivel': self.nivel,
-            'ps': self.ps,
-            'mana': self.mana,
-            'fuerza': self.fuerza,
-            'agilidad': self.agilidad,
-            'vialidad': self.vitalidad,
-            'energia': self.energia,
-            'defensafisica': self.defensafisica,
-            'defensamagica': self.defensamagica,
-            'estado': self.estado,
-            'ataque_id': self.ataque_id,
-            'experiencia': self.experiencia,
-            'raza': self.raza
-        }
-
-
-
-
-"""
-CREATE TABLE entidades (
-    entidad_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    nombre TEXT NOT NULL,
-    nivel INTEGER NOT NULL,
-    ps INTEGER NOT NULL,
-    mana INTEGER NOT NULL,
-    fuerza INTEGER NOT NULL,
-    agilidad INTEGER NOT NULL,
-    vitalidad INTEGER NOT NULL,
-    energia INTEGER NOT NULL,
-    defensafisica INTEGER NOT NULL,
-    defensamagica INTEGER NOT NULL,
-    ataque INTEGER NOTE NULL,
-    estado TEXT NOT NULL,
-    exp INTEGER NOT NULL,
-    pacto TEXT NOT NULL);
-"""
-
-"""
-CREATE TABLE ataques (
-    ataque_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    FOREIGN KEY(entidad) REFERENCES entidad(entidad_id)
-    nombre TEXT NOT NULL,
-    descripcion TEXT NOT NULL,
-    costomana INTEGER NOT NULL,
-    multiplicador REAL NOT NULL,
-    especial NUMERIC NOT NULL,
-    
-"""
-
-"""
-    nombre = db.Column(db.String(50))
-    self.nombre = str(nombre)
-    self.nivel = int(nivel)
-    self.ps = int(ps)
-    self.mana = int(mana)
-    self.fuerza = int(fuerza)
-    self.agilidad = int(agilidad)
-    self.vitalidad = int(vitalidad)
-    self.energia = int(energia)
-    self.defensafisica = int(defensafisica)
-    self.defensamagica = int(defensamagica)
-    self.estado = str(estado)
-    self.exp = int(exp)
-    self.items = items
-    self.ataques = ataques
-    self.ataca = False
-"""

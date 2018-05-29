@@ -1,15 +1,15 @@
 from core.src.Persistance.PlayableRepository import *
 
-playablesrepository = PlayableRepository()
+entities_repository = EntityRepository()
 
 
-class PlayableService():
+class EntityService():
 
-    def getFirst(self):
-        return playablesrepository.getFirst()
+    def get_first(self):
+        return entities_repository.get_first()
 
-    def getAll(self):
-        return playablesrepository.getAll()
+    def get_all_playables(self):
+        return entities_repository.get_all()
 
-    def get_attributes(self, playable_id):
-        return playablesrepository.get_attributes(playable_id)
+    def get_attributes(self, entity_id):
+        return entities_repository.get_attributes(entity_id)

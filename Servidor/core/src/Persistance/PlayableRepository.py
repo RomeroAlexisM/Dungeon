@@ -1,31 +1,26 @@
-from flask import session
-from sqlalchemy import Integer
-from sqlalchemy.dialects.mysql import json
-import json
 import api
-
 from api.app import Session, db
-from api.models import Playable
-from sqlalchemy.sql import column, text
+from api.models import Entity
 
 
-class PlayableRepository():
-    def getFirst(self):
+class EntityRepository():
+
+    def get_first(self):
         session = Session()
-        session.query(Playable).first()
+        session.query(Entity).first()
 
-    def getAll(self):
+    def get_all(self):
         session = Session()
-        return session.query(Playable).all()
+        return session.query(Entity).all()
 
     def get_attributes(self, playable_id):
         print(playable_id)
         session = Session()
 
-        for ps, mana, fuerza, agilidad, vitalidad, energia in session.query(Playable.ps, Playable.mana, Playable.fuerza,
-                                                                            Playable.agilidad, Playable.vitalidad,
-                                                                            Playable.energia).filter_by(id=playable_id):
-            atributo = api.models.Attribute(ps, mana, fuerza, agilidad, vitalidad, energia)
-            print(ps, mana, fuerza, agilidad, vitalidad, energia)
+        for hp, mana, strength, agility, vitality, energy in session.query(Entity.hp, Entity.mana, Entity.strength,
+                                                                           Entity.agility, Entity.vitality,
+                                                                           Entity.energy).filter_by(id=playable_id):
+            atributtes = api.models.Attribute(hp, mana, strength, agility, vitality, energy)
+            print(hp, mana, strength, agility, vitality, energy)
 
-        return atributo
+        return atributtes
