@@ -1,4 +1,4 @@
-from Servidor.core.src.Entidades.globales import MENSAJE_FALTA_MANA, MODIFICADOR_DANIO_BASICO, FUERZA, ENERGIA, \
+from Servidor.core.src.Entidades.globals import MENSAJE_FALTA_MANA, MODIFICADOR_DANIO_BASICO, FUERZA, ENERGIA, \
     AGILIDAD, VALOR_REGENERACION_MANA, VALOR_REGENERACION_VIDA, VITALIDAD, CERO
 
 
@@ -24,7 +24,7 @@ class Ente:
     def atacar(self, oponente, ataque):
         if ataque.especial:
             if self.suficiente_mana(ataque.costomana):
-                from Servidor.core.src.Entidades.globales import MODIFICADOR_DANIO_ESPECIAL
+                from Servidor.core.src.Entidades.globals import MODIFICADOR_DANIO_ESPECIAL
                 oponente.ps -= self.calcular_multiplicador(ataque, MODIFICADOR_DANIO_ESPECIAL)
                 self.perder_mana(ataque.costomana)
             else:

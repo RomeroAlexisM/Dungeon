@@ -1,6 +1,6 @@
 import random
 from Servidor.core.src.Entidades.Ente import Ente
-from Servidor.core.src.Entidades.globales import MODIFICADOR_DANIO_ESPECIAL, MODIFICADOR_DANIO_BASICO
+from Servidor.core.src.Entidades.globals import MODIFICADOR_DANIO_ESPECIAL, MODIFICADOR_DANIO_BASICO
 
 
 class Enemigo(Ente):

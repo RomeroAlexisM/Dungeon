@@ -20,7 +20,7 @@ class EntityRepository():
         for hp, mana, strength, agility, vitality, energy in session.query(Entity.hp, Entity.mana, Entity.strength,
                                                                            Entity.agility, Entity.vitality,
                                                                            Entity.energy).filter_by(id=playable_id):
-            atributtes = api.models.Attribute(hp, mana, strength, agility, vitality, energy)
+            attributes = api.models.Attribute(hp, mana, strength, agility, vitality, energy)
             print(hp, mana, strength, agility, vitality, energy)
 
-        return atributtes
+        return attributes

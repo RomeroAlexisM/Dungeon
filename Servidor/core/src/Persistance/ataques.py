@@ -1,4 +1,4 @@
-from Servidor.core.src.Entidades.Ataque import Ataque
+from Servidor.core.src.Entidades.Attack import Ataque
 from Servidor.core.globales import FUERZA, ENERGIA, AGILIDAD, VITALIDAD
 
 

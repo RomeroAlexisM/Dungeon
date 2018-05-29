@@ -1,6 +1,6 @@
-from Servidor.core.src.Entidades.Duelo import Duelo
-from Servidor.core.src.Entidades.Enemigo import Enemigo
-from Servidor.core.src.Entidades.Jugador import Jugador
+from Servidor.core.src.Entidades.Duel import Duelo
+from Servidor.core.src.Entidades.Enemy import Enemigo
+from Servidor.core.src.Entidades.Player import Jugador
 from Servidor.core.src.Persistencia.ataques import *
 
 rata = Enemigo(identificador='Rata',

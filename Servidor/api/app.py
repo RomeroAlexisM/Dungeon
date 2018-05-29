@@ -13,7 +13,6 @@ engine = create_engine(SQLALCHEMY_DATABASE_URI)
 Session = sessionmaker(bind=engine)
 
 from core.src.Controllers.EntidadController import *
-from core.src.Controllers.EnemyController import *
 from core.src.Controllers.ImageController import *
 from core.src.Controllers.UserController import *
 
